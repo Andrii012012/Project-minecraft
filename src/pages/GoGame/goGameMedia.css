@@ -1,0 +1,16 @@
+/* 480 */
+
+@media (max-width: 30em) {
+  .go-game__description {
+    margin-bottom: 1.5625rem;
+  }
+}
+
+/* 380 */
+
+@media (max-width: 23.75rem) {
+  .go-game__image {
+    margin-bottom: 0rem;
+    height: 18.75rem;
+  }
+}

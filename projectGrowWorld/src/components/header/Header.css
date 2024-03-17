@@ -1,0 +1,169 @@
+header {
+  margin-bottom: 3.125rem;
+  grid-area: header;
+  width: 100%;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 5rem;
+  padding: 1.5625rem 1.25rem 0rem 1.25rem;
+  font-size: 1.312rem;
+}
+
+.header__top a {
+  color: #fff;
+}
+
+.header__lists {
+  display: flex;
+}
+
+.header__item {
+  padding: 1.25rem;
+  margin-right: 5px;
+}
+
+.header__item:hover .header__item-icon {
+  animation-name: animationNavIcon;
+  animation-duration: 0.8s;
+}
+
+@keyframes animationNavIcon {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.header__item-navigator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__item-icon {
+  margin-bottom: 10px;
+  width: 60px;
+  height: 60px;
+}
+
+.header__item:last-child {
+  margin-right: 6.25rem;
+}
+
+.header__btn {
+  background-color: var(--lime-green) !important;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+  align-self: center;
+}
+
+.header__logo {
+  position: relative;
+  z-index: 20;
+  flex: 1 1 25%;
+}
+
+.header__logo img {
+  width: 100px;
+  height: 100px;
+}
+
+.header__btn::before {
+  content: "";
+  display: block;
+  height: 40px;
+  width: 40px;
+  margin-right: 1.5625rem;
+  background: url("../../assets/images/global/go-play.svg") no-repeat;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: flex-start;
+  align-self: center;
+  flex: 1 1 75%;
+}
+
+.burger {
+  width: 60px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  order: 3;
+  cursor: pointer;
+  display: none;
+}
+
+.burger span {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background-color: #fff;
+}
+
+.burger::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.burger::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* .active-burger {
+  position: relative;
+  z-index: 50;
+}
+
+
+.active-burger + nav ul {
+  position: relative;
+  z-index: 11;
+  margin-top: 150px;
+  flex-direction: row;
+}
+
+.active-burger + nav::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+} */
+
+.header__btn {
+  position: relative;
+  z-index: 20;
+}

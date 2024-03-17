@@ -1,0 +1,15 @@
+
+.form-buy-coins__btn{
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.form-buy-coins{
+    width: 100%;
+}
+
+.form-buy-coins__wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

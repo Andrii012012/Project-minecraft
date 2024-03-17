@@ -1,0 +1,25 @@
+.field-fill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3.125rem;
+}
+
+.field-fill:last-child {
+  margin-bottom: 0rem;
+}
+
+.field-fill__body-info {
+  display: flex;
+  align-items: center;
+}
+
+.field-fill__point {
+  margin-right: 0.9375rem;
+}
+
+.field-fill__point {
+  width: 90px;
+  font-size: 2.875rem;
+  height: 90px;
+}
+

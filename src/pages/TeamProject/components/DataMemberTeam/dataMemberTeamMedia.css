@@ -1,0 +1,15 @@
+/* 380 */
+
+@media (max-width: 23.75rem) {
+  .team-project__sarver-name {
+    font-size: 1.125rem;
+  }
+  .team-project__name {
+    font-size: 1.125rem;
+  }
+
+  .team-project__status {
+    font-size: 1rem;
+    color: rgba(255, 66, 14, 0.5);
+  }
+}

@@ -1,0 +1,23 @@
+.footer__title {
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.footer__list-block {
+  padding: 0rem 3.125rem 0rem 3.125rem;
+  position: relative;
+  margin-right: 3.125rem;
+  color: #fff;
+}
+
+.footer__list-block::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 100%;
+  background-color: rgba(216, 76, 21, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}

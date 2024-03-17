@@ -1,0 +1,7 @@
+/* 480 */
+
+@media (max-width: 30em) {
+  .settings-profile__title {
+    margin-bottom: 5px;
+  }
+}

@@ -1,0 +1,28 @@
+/* 520 */
+
+@media (max-width: 32.5em) {
+  .questions__lists {
+    margin-bottom: 3.125rem;
+  }
+}
+
+/* 480 */
+
+@media (max-width: 30rem) {
+}
+
+/* 380 */
+
+@media (max-width: 23.75rem) {
+  .questions__body-info {
+    width: 100%;
+  }
+  .questions__icon {
+    max-width: 6.25rem;
+    max-height: 6.25rem;
+    margin-bottom: 1.5625rem;
+  }
+  .questions__body-section {
+    margin-bottom: 3.125rem;
+  }
+}

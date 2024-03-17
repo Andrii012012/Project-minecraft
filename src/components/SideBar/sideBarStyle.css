@@ -1,0 +1,88 @@
+.side-bar {
+  max-width: 22.187rem;
+  width: 100%;
+  background-color: #0000;
+  grid-area: sidebar;
+  justify-self: flex-end;
+  padding-left: 1.25rem;
+  margin-left: -1.25rem;
+}
+
+.info-section {
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 1.5625rem;
+}
+
+.side-bar__name-section {
+  background: var(--main-color);
+  min-height: 60px;
+  width: 100%;
+  display: flex;
+  padding: 0rem 1.25rem;
+  align-items: center;
+  color: #fff;
+  font-size: 1.3125rem;
+  line-height: 1.58em;
+}
+
+.sign-btn {
+  padding: 11px;
+  width: 100%;
+  display: block;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.125rem;
+  text-align: center;
+  line-height: 1.5em;
+  font-weight: 500;
+}
+
+.sign__text {
+  display: flex;
+  align-items: center;
+}
+
+.form-sign__btn-sign {
+  width: 95%;
+  margin-bottom: 1.25rem;
+}
+
+.sign__name-section {
+  margin-bottom: 1.25rem;
+}
+
+.sign-btn:last-child {
+  margin-bottom: 0rem;
+}
+
+.sign-btn {
+  transition: 0.3s linear;
+}
+
+.sign-bth:hover {
+  transition: 0.3s linear;
+}
+
+.user__btn {
+  color: #fff;
+  background-color: var(--coral);
+}
+
+.item-nav button {
+  font-size: 1.25rem;
+}
+
+.lists-items {
+  padding: 0rem 1rem;
+}
+
+.lists-items a {
+  color: #000;
+}
+
+.side-bar__icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 0.9375rem;
+}

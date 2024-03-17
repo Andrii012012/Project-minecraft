@@ -1,0 +1,14 @@
+.pay__item-play-system {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+  padding: 0.625rem;
+  cursor: pointer;
+}
+
+.pay__item-play-system img {
+  max-width: 7.5rem;
+  max-height: 7.5rem;
+}

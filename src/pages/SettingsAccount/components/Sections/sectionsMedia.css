@@ -1,0 +1,29 @@
+/* 640 */
+
+@media (max-width: 40em) {
+  .settings__navigator {
+    grid-template-columns: repeat(2, 0.5fr);
+  }
+  .settings__image-point {
+    max-width: 9.375rem;
+    height: 9.375rem;
+  }
+}
+
+/* 520 */
+
+@media (max-width: 32.5em) {
+  .settings__navigator {
+    grid-template-columns: 1fr;
+    gap: 0.9375rem;
+  }
+}
+
+/* 480 */
+
+@media (max-width: 30em) {
+  .settings__image-point {
+    max-width: 7.5rem;
+    height: 7.5rem;
+  }
+}

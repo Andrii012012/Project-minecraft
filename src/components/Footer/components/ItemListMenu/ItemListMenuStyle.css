@@ -1,0 +1,15 @@
+.footer__item {
+  margin-bottom: 0.625rem;
+  font-size: 1.125rem;
+  line-height: 1.25em;
+}
+
+.footer__item a {
+  color: var(--coral);
+  transition: 0.3s linear;
+}
+
+.footer__item a:hover{
+    transition: 0.3s linear;
+    color: rgba(255, 127, 80, 0.8);
+}

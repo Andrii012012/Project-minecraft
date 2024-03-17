@@ -1,0 +1,8 @@
+
+.profile__status-item{
+    margin-bottom: 5px;
+}
+
+.profile__status-item:last-child{
+    margin-bottom: 0px;
+}

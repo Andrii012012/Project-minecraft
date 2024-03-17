@@ -1,0 +1,38 @@
+.instructions__code {
+  padding: 0.9375rem;
+  color: #fff;
+  font-weight: 500;
+  background-color: var(--main-color);
+}
+
+.instructions__subtitle {
+  text-align: center;
+  line-height: 1.331em;
+  margin-bottom: 1.5625rem;
+}
+
+.instructions__code {
+  margin-bottom: 3.125rem;
+  line-height: 1.3125em;
+  border-radius: 6px;
+}
+
+.instructions__code span {
+  margin-right: 3px;
+}
+
+.instructions__body-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.instructions__btn {
+  padding: 1.3125rem;
+  background-color: #80bd9e;
+  width: 35%;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.3em;
+}

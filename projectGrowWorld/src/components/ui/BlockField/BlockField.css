@@ -1,0 +1,74 @@
+.field-fill{
+    display: flex;
+    align-items: center;
+    margin-bottom: 3.125rem;;
+}
+
+.field-fill:last-child{
+    margin-bottom: 0rem;
+}
+
+.field-fill__body-info{
+    display: flex;
+    align-items: center;
+    flex: 1 1 50%;
+}
+
+.field-fill__body-field{
+    flex: 1 1 auto;
+}
+
+.field-fill__info{
+    max-width: 15.9375rem;
+    width: 100%;
+}
+
+.field-fill__content{
+    padding: 3.125rem;
+}
+
+.field-fill__point{
+    margin-right: 0.9375rem;
+}
+
+.field-fill__point-title{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.field-fill__text{
+    font-weight: 400;
+    line-height: 1.35em;
+}
+
+.field-fill__lists{
+    margin-bottom: 3.125rem;
+}
+
+.field-fill__agree{
+    margin-bottom: 1.5625rem;
+    text-align: center;
+}
+
+.field-fill__send{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.field-fill__agree{
+    max-width: 36rem;
+    line-height: 1.25em;
+}
+
+.field-fill__agree span{
+    color: var(--seafoam-green);
+}
+
+.field-fill__point{
+    width: 90px;
+    font-size: 2.875rem;
+    height: 90px;
+}

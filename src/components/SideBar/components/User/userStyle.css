@@ -1,0 +1,105 @@
+.user__icon-coins {
+  width: 60px;
+  height: 60px;
+}
+
+.user__body-balance {
+  padding: 10px;
+  background-color: #eee;
+  width: 100%;
+  display: flex;
+}
+
+.user-body__monay-section {
+  position: relative;
+  margin-right: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-body__monay-section:last-child {
+  margin-right: 0rem;
+}
+
+.user-body__monay-section:last-child::after {
+  display: none;
+}
+
+.user-body__monay-section::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -10px;
+  background-color: #000;
+}
+
+.user__coins {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.user__btn-monay {
+  padding: 6px;
+  text-align: center;
+  line-height: 1rem;
+  background-color: var(--main-color);
+  color: "#fff";
+  font-size: 14px;
+}
+
+.user__header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.user__avatar {
+  margin-right: 1.5625rem;
+}
+
+.user__greetings {
+  font-weight: 700;
+}
+
+.user__text {
+  font-size: 1.125rem;
+}
+
+.user__name {
+  color: var(--main-color);
+}
+
+.user {
+  padding: 0rem 1rem;
+}
+
+.user a {
+  color: #000;
+}
+
+.user__name {
+  font-size: 1.3125rem;
+  line-height: 1.5em;
+}
+
+.user__info-coins {
+  font-size: 1.25rem;
+  line-height: 1.1em;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.user__header {
+  margin-bottom: 0.9375rem;
+}
+
+.user_btn {
+  background-color: transparent;
+  display: block;
+}

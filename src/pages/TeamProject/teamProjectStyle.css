@@ -1,0 +1,20 @@
+.team-project {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.team-project__title {
+  margin-bottom: 0.625rem;
+}
+
+.team-project__body-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5625rem;
+  margin-bottom: 3.125rem;
+}
+
+.team-project__body-item:last-child {
+  margin-bottom: 0rem;
+}

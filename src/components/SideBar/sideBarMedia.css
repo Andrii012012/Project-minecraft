@@ -1,0 +1,25 @@
+/* 1050 */
+
+@media (max-width: 65.625em) {
+  .side-bar {
+    max-width: 100%;
+    padding-left: 0rem;
+  }
+}
+
+
+/* 480 */
+
+@media (max-width: 40em) {
+  .sign-btn {
+    font-size: 1rem;
+  }
+}
+
+/* 380 */
+
+@media (max-width: 23.75rem) {
+  .side-bar__name-section {
+    font-size: 1.125rem;
+  }
+}

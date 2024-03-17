@@ -1,0 +1,22 @@
+/* 1050 */
+
+@media (max-width: 65.625em) {
+  .footer__list {
+    margin-bottom: 0.625rem;
+    width: 100%;
+  }
+  .footer__list-block {
+    padding: 3.125rem 0rem 3.125rem 0rem;
+    margin-right: 0rem;
+  }
+  .footer__list-block::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(216, 76, 21, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

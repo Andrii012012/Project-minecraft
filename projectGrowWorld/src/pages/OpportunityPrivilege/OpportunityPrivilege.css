@@ -1,0 +1,81 @@
+.opportunity-privilege {
+  width: 100%;
+  background-color: #fff;
+}
+
+.opportunity-privilege__header {
+  padding: 3.125rem;
+  background-color: rgba(255, 66, 14, 0.8);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3.125rem;
+}
+
+.opportunity-privilege__image {
+  max-width: 15.625rem;
+  width: 100%;
+  max-height: 15.625rem;
+}
+
+.opportunity-privilege__subtitle {
+  margin-bottom: 1.5625rem;
+}
+
+.opportunity-privilege__body-explain{
+    flex-basis: 70%;
+}
+
+.opportunity-privilege__explain {
+  line-height: 1.2em;
+}
+
+.privilege-has__body{
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 1.5625rem;
+}
+
+.privilege-has__body:last-child{
+    margin-bottom: 0rem;
+}
+
+.opportunity-privilege__image{
+    max-width: 15.625rem;
+    max-height: 15.625rem;
+    min-height: 6.25rem;
+    min-width: 6.25rem;
+    flex-basis: 30%;
+}
+
+.privilege-has {
+  width: 100%;
+  background: #fff;
+  border-radius: 0.625rem;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 1.25rem;
+}
+
+.privilege-has__title {
+  margin-bottom: 1.5625rem;
+}
+
+.privilege-has__item {
+  border: 1px solid #000;
+  padding: 0.9375rem;
+  background-color: #eee;
+}
+
+.privilege-has__command {
+  display: block;
+  margin-bottom: 0.625rem;
+  text-align: left;
+}
+
+.privilege-has__description {
+  text-align: left;
+}
+
+.privilege-has__icon {
+  width: 20px;
+  height: 20px;
+}

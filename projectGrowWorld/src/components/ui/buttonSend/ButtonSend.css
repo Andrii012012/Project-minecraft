@@ -1,0 +1,14 @@
+.button-send {
+  padding: 1.125rem;
+  border-radius: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  /* font-size: 12.125rem; */
+  line-height: 1.5em;
+  transition: 0.3s linear;
+}
+
+.button-send:hover {
+  transition: 0.3s linear;
+  opacity: 0.8;
+}

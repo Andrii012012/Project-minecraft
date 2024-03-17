@@ -1,0 +1,15 @@
+/* 640 */
+
+@media (max-width: 40em) {
+  .team-project__body-item {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 480 */
+
+@media (max-width: 30rem) {
+  .team-project__sarver-name {
+    font-size: 1.3125rem;
+  }
+}

@@ -1,0 +1,130 @@
+.go-game {
+  width: 100%;
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+}
+
+.go-game__image {
+  width: 100%;
+  margin-bottom: 3.125rem;
+}
+
+.go-game__image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.go-game__header {
+  position: relative;
+}
+
+.go-game__title {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  text-align: center;
+  color: #fff;
+  max-width: 31.25rem;
+}
+
+.go-game__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.go-game__description {
+  text-align: center;
+  margin-bottom: 6.25rem;
+}
+
+.go-game__point {
+  width: 120px;
+  height: 120px;
+  font-size: 2.25rem;
+}
+
+.go-game__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3.125rem;
+}
+
+.go-game__item:last-child {
+  margin-bottom: 0rem;
+}
+
+.go-game__register {
+  justify-self: center;
+}
+
+.go-game__point {
+  margin-right: 6.024%;
+}
+
+.go-game__text {
+  margin-bottom: 3.125rem;
+}
+
+.go-game__btn {
+  background-color: var(--seafoam-green);
+  color: #fff;
+}
+
+.go-game__lists {
+  margin-bottom: 6.25rem;
+}
+
+.go-game__register {
+  position: relative;
+}
+
+.go-game__btn {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0rem;
+}
+
+.go-game__btn::before{
+    content: '';
+    transition: 0.3s linear;
+}
+
+.go-game__btn:hover::before{
+    content: '';
+    transition: 0.3s linear;
+    transform: scale(1.1);
+}
+
+.go-game__btn{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.go-game__register-account::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 80px;
+  margin-left: 10px;
+  background: url("../../assets/images/global/icon-filling-data.svg");
+  background-repeat: no-repeat;
+  background-size: 60px;
+  transform: rotate(-8deg);
+}
+
+.go-game__download-launcher::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 80px;
+  margin-left: 10px;
+  background: url("../../assets/images/global/download-launcher.svg");
+  background-repeat: no-repeat;
+  background-size: 60px;
+  transform: rotate(-8deg);
+}

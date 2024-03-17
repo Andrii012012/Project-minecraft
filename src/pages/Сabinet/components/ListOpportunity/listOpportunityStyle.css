@@ -1,0 +1,37 @@
+.list-opportunity__icon {
+  flex-basis: 50%;
+}
+
+.list-opportunity__icon img {
+  max-width: 9.375rem;
+  max-height: 6.25rem;
+}
+
+.list-opportunity__text {
+  flex-basis: 50%;
+  text-align: center;
+  font-weight: 500;
+}
+
+.list-opportunity__item {
+  padding: 0.625rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  border: 1px solid #eee;
+}
+
+.list-opportunity__icon {
+  transition: 0.3s linear;
+}
+
+.list-opportunity__item:hover .list-opportunity__icon {
+  transition: 0.3s linear;
+  transform: scale(1.2);
+}
+
+.list-opportunity__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #000;
+}

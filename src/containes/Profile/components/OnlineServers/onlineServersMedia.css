@@ -1,0 +1,7 @@
+/* 380 */
+
+@media (max-width: 23.75em) {
+  .online-servers__item {
+    font-size: 0.875rem;
+  }
+}

@@ -1,0 +1,13 @@
+/* 480 */
+
+@media (max-width: 30em) {
+  .accordion__title {
+    font-size: 0.875rem;
+  }
+  .accordion__text {
+    font-size: 0.75rem;
+  }
+  .active-accordion .accordion__header {
+    margin-bottom: 5px;
+  }
+}

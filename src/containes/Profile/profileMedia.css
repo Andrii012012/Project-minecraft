@@ -1,0 +1,28 @@
+/* 520 */
+
+@media (max-width: 32.5em) {
+  .profile__avatar img {
+    width: 120px;
+    height: 120px;
+  }
+  .profile__description {
+    margin-bottom: 1.5625rem;
+  }
+}
+
+/* 480 */
+
+@media (max-width: 30em) {
+  .profile__avatar img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* 380 */
+
+@media (max-width: 23.75em) {
+  .profile__online {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,18 @@
+/* 640 */
+
+@media (max-width: 40em) {
+  .settings-profile__body {
+    flex-direction: column;
+    text-align: center;
+  }
+  .settings-profile__body-settings {
+    margin-right: 0;
+    margin-bottom: 3.125rem;
+  }
+  .settings-profile__body-settings:last-child {
+    margin-bottom: 0rem;
+  }
+  .settings-profile__description {
+    max-width: initial;
+  }
+}

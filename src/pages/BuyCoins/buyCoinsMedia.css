@@ -1,0 +1,18 @@
+/* 480 */
+
+@media (max-width: 30em) {
+  .buy-coins__title {
+    font-size: 1.5rem;
+  }
+}
+
+/* 380 */
+
+@media (max-width: 23.75em) {
+  .buy-coins__title {
+    font-size: 1.3125rem;
+  }
+  .buy-coins__info-exchange {
+    font-size: 1.3125rem;
+  }
+}

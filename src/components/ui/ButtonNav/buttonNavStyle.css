@@ -1,0 +1,14 @@
+.button-nav {
+  padding: 1.3125rem;
+  font-size: 1.25rem;
+  line-height: 1.5em;
+  border-radius: 6px;
+  text-transform: uppercase;
+  text-align: center;
+  transition: 0.3s linear;
+}
+
+.button-nav:hover {
+  transition: 0.3s linear;
+  transform: scale(1.05);
+}

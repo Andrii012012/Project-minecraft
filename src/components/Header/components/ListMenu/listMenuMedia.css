@@ -1,0 +1,32 @@
+/* 920 */
+
+@media (max-width: 57.5rem) {
+  .header__item {
+    font-size: 1.75rem;
+  }
+  .header__item-icon {
+    width: 80px;
+    height: 80px;
+  }
+  .header__item:last-child {
+    margin-right: 0rem;
+  }
+}
+
+/* 520 */
+
+@media (max-width: 32.5rem) {
+  .header__item {
+    padding: 1rem;
+    font-size: 1.125rem;
+  }
+}
+
+/* 380 */
+
+@media (max-width: 23.75rem) {
+  .header__item {
+    padding: 1rem;
+    font-size: 1.125rem;
+  }
+}

@@ -1,0 +1,15 @@
+/* 1050 */
+
+@media (max-width: 65.625em) {
+  .sidebar-social {
+    max-width: 50%;
+  }
+}
+
+/* 520 */
+
+@media (max-width: 32.5em) {
+  .sidebar-social {
+    max-width: 100%;
+  }
+}

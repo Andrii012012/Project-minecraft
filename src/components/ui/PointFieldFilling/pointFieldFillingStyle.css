@@ -1,0 +1,45 @@
+.point-field-filling__info {
+  flex: 1 1 auto;
+}
+
+.point-field-filling__content {
+  padding: 3.125rem;
+}
+
+.point-field-filling__point-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 0.625rem;
+}
+
+.point-field-filling__text {
+  font-weight: 400;
+  line-height: 1.35em;
+  max-width: 15.625rem;
+  display: block;
+}
+
+.point-field-filling__lists {
+  margin-bottom: 3.125rem;
+}
+
+.point-field-filling__agree {
+  margin-bottom: 1.5625rem;
+  text-align: center;
+}
+
+.point-field-filling__send {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.point-field-filling__agree {
+  max-width: 36rem;
+  line-height: 1.25em;
+}
+
+.point-field-filling__agree span {
+  color: var(--seafoam-green);
+}

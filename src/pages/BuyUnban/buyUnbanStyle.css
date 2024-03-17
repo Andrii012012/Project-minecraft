@@ -1,0 +1,21 @@
+
+
+.buy-unban{
+    width: 100%;
+    background-color: #fff;
+}
+
+.buy-unban__content{
+    position: relative;
+    z-index: 10;
+}
+
+.buy-unban__select{
+    margin-bottom: 1.5625rem;
+}
+
+.buy-unban__info{
+    font-size: 1.125rem;
+    line-height: 1.3em;
+    margin-bottom: 1.5625rem;
+}

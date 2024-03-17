@@ -1,0 +1,39 @@
+/* 1050 */
+
+@media (max-width: 65.625em) {
+  .side-bar {
+    max-width: 100%;
+    padding-left: 0rem;
+  }
+
+  .sidebar-social {
+    max-width: 50%;
+  }
+}
+
+/* 520 */
+
+@media (max-width: 32.5em) {
+  .sidebar-social {
+    max-width: 100%;
+  }
+  .form-sign__btn-sign {
+    width: 95% !important;
+  }
+}
+
+/* 480 */
+
+@media (max-width: 40em) {
+  .sign-btn {
+    font-size: 1rem;
+  }
+}
+
+/* 380 */
+
+@media (max-width: 23.75rem) {
+  .side-bar__name-section {
+    font-size: 1.125rem;
+  }
+}

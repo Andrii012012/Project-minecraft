@@ -1,0 +1,11 @@
+/* 380 */
+
+@media (max-width: 23.75em) {
+  .pay__choice-pay-system {
+    font-size: 1.125rem;
+  }
+  .pay__item-play-system img {
+    max-width: 6.25rem;
+    max-height: 6.25rem;
+  }
+}

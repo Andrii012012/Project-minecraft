@@ -1,0 +1,9 @@
+.privilege-has__command {
+  display: block;
+  margin-bottom: 0.625rem;
+  text-align: left;
+}
+
+.privilege-has__description {
+  text-align: left;
+}

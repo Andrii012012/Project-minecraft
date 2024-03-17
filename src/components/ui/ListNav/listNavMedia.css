@@ -1,0 +1,21 @@
+/* 480 */
+
+@media (max-width: 40em) {
+  .item-nav {
+    font-size: 1.125rem;
+  }
+  .item-nav button {
+    font-size: 1.125rem;
+  }
+}
+
+/* 380 */
+
+@media (max-width: 23.75rem) {
+  .item-nav {
+    font-size: 1rem;
+  }
+  .item-nav button {
+    font-size: 1rem;
+  }
+}

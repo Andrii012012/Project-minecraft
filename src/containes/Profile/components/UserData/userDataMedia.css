@@ -1,0 +1,23 @@
+/* 520 */
+
+@media (max-width: 32.5em) {
+  .user-data__item {
+    font-size: 1rem;
+  }
+}
+
+/* 480 */
+
+@media (max-width: 30em) {
+  .user-data__item {
+    padding: 0.9375rem;
+  }
+}
+
+/* 380 */
+
+@media (max-width: 23.75em) {
+  .user-data__item {
+    font-size: 0.875rem;
+  }
+}

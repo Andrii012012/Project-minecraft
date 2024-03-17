@@ -1,0 +1,61 @@
+/* 520 */
+
+@media (max-width: 32.5rem) {
+  .go-game__item {
+    flex-direction: column;
+    margin-bottom: 6.25rem;
+  }
+  .go-game__point {
+    margin-right: 0rem;
+    margin-bottom: 1.5625rem;
+  }
+  .go-game__text {
+    margin-bottom: 1.5625rem;
+  }
+  .go-game__point {
+    width: 100px;
+    height: 100px;
+    font-size: 2rem;
+  }
+}
+
+/* 480 */
+
+@media (max-width: 30em) {
+  .go-game__point {
+    width: 100px;
+    height: 100px;
+    font-size: 2rem;
+  }
+}
+
+/* 380 */
+
+@media (max-width: 23.75rem) {
+  .go-game__point {
+    width: 80px;
+    height: 80px;
+    font-size: 1.75rem;
+  }
+  .go-game__item {
+    margin-bottom: 1.5625rem;
+  }
+  .go-game__register-account::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-size: 50px;
+  }
+  .go-game__register-account::before {
+    content: "";
+    width: 45px;
+    height: 60px;
+    background-size: 45px;
+  }
+  .go-game__download-launcher::before {
+    content: "";
+    width: 45px;
+    height: 60px;
+    background-size: 45px;
+  }
+}

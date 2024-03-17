@@ -1,0 +1,143 @@
+.info-server {
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+  }
+  
+  .info-server__header {
+    position: relative;
+    /* padding-top: 6.25rem; */
+    margin-bottom: 1.5625rem;
+  }
+  
+  .info-server__header::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 18.75rem;
+    /* background: url("../../assets/images/servers/TechnoMagic/techno-magic-icon-sign.png") center 100%/100% */
+      /* no-repeat; */
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .info-server__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .info-server__header-body {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+  }
+
+  .info-server__image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 18.75rem;
+  }
+  
+  .info-server__header-body{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 6.25rem;
+  }
+  
+  .info-server__title {
+    font-weight: 700;
+    font-size: 2.875rem;
+    line-height: 1.5em;
+  }
+  
+  .info-server__content {
+    position: relative;
+    z-index: 10;
+    padding: 0rem 3.125rem 3.125rem 3.125rem;
+  }
+  
+  .about-server__info {
+    background: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    width: 100%;
+  }
+  
+  .about-server {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 1.5625rem;
+  }
+  
+  .about-server__info-item {
+    margin-bottom: 0.9375rem;
+    border: 1px solid #000;
+    padding: 1.25rem;
+  }
+  
+  .info-server__description {
+    font-size: 1.3125rem;
+    line-height: 1.3em;
+    text-align: center;
+    margin-bottom: 1.5625rem;
+  }
+  
+  .about-mods {
+    background: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    padding: 1.25rem;
+  }
+  
+  .info-server__social {
+    margin-bottom: 3.125rem;
+  }
+  
+  .about-mods__title {
+    font-size: 1.5rem;
+    line-height: 1.5em;
+    margin-bottom: 1.5625rem;
+  }
+  
+  .about-mods__item {
+    padding: 1.25rem;
+    width: 100%;
+    margin-bottom: 0.625rem;
+    background-color:  rgba(128, 189, 158, 0.5);
+    display: flex;
+  }
+  
+  .about-mods__item:last-child {
+    margin-bottom: 0rem;
+  }
+  
+  .about-mods__icon {
+    margin-right: 1.5625rem;
+    object-fit: contain;
+  }
+  
+  .about-mods__name-mode {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    line-height: 1.3em;
+  }
+  
+  .about-mods__description-mode {
+    line-height: 1.3em;
+  }
+  

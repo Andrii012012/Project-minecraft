@@ -1,0 +1,149 @@
+.servers {
+  width: 100%;
+  background-color: #fff;
+}
+
+.servers__header {
+  position: relative;
+  width: 100%;
+  margin-bottom: 3.125rem;
+  height: 18.75rem;
+  display: flex;
+  align-items: center;
+  padding: 0rem 3.125rem 0rem 3.125rem;
+}
+
+.servers__image{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-basis: 100%;
+}
+
+.servers__image img{
+    width: 100%;
+    height: 100%;
+}
+
+.servers__body-info {
+  z-index: 10;
+  color: #fff;
+  backdrop-filter: blur(15px);
+  background: rgba(8, 148, 212, 0.3);
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.servers__info {
+  text-align: center;
+  margin-bottom: 3.125rem;
+}
+
+.server-description__wrapper {
+  width: 100%;
+  position: relative;
+  display: block;
+  color: #fff;
+}
+
+.server-description__image {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.75rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.server-description {
+  display: grid;
+  grid-template-columns: 1fr;
+  color: #fff;
+}
+
+.server-description__content {
+  position: relative;
+  z-index: 10;
+  padding: 1.25rem;
+}
+
+.server-description__item {
+  transition: 0.3s linear;
+}
+
+.server-description__item:hover {
+  transition: 0.3s linear;
+  transform: scale(1.05);
+}
+
+.server-description__title {
+  margin-bottom: 5px;
+}
+
+.server-description_version {
+  font-size: 1.125rem;
+  font-weight: 700;
+  align-self: flex-start;
+}
+
+.server-description__body-title {
+  margin-right: 1.5625rem;
+  flex: 1 1 auto;
+}
+
+.server-description__icon {
+  max-width: 6.25rem;
+  width: 100%;
+  height: 6.25rem;
+  margin-right: 1.5625rem;
+}
+
+.server-description__body {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.9375rem;
+}
+
+.server-description__body-info-server {
+  font-size: 1.125rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9375rem;
+}
+
+.server-description__description {
+  padding: 0.625rem;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.server-description__header {
+  margin-bottom: 1.25rem;
+}
+
+.server-description_version {
+  padding: 0.625rem;
+  background-color: var(--main-color);
+  border-radius: 0.75rem;
+}
+
+.server-description--background {
+  padding: 0.625rem;
+  background-color: var(--seafoam-green);
+  border-radius: 0.75rem;
+  line-height: 1em;
+}
+
+.server-description {
+  margin-bottom: 3.125rem;
+}
+
+.servers__img {
+  width: 60px;
+  height: 60px;
+  margin-right: 0.9375rem;
+  align-self: flex-end;
+}

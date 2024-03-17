@@ -1,0 +1,16 @@
+.form-recovery input {
+  width: 100%;
+}
+
+.form-recovery .field-fill__body-info {
+  flex: 1 1 auto;
+}
+
+.form-recovery .field-fill__body-info {
+  justify-content: flex-end;
+}
+
+.form-recovery__body-btn {
+  display: flex;
+  justify-content: center;
+}

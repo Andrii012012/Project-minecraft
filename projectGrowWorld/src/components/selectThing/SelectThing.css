@@ -1,0 +1,25 @@
+
+.select-thing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
+    background-color: #fff;
+    border: 1px solid #eee;
+    padding: 1.25rem;
+} 
+
+.select-thing__title {
+    text-align: center;
+    font-size: 21px;
+    line-height: 1.5em;
+    margin-bottom: 1.5625rem;
+}
+
+.select-thing__title::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2.5px;
+    margin-top: 5px;
+}

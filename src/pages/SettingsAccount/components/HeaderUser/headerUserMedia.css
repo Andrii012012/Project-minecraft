@@ -1,0 +1,46 @@
+/* 640 */
+
+@media (max-width: 40em) {
+  .settings__avatar {
+    max-width: 9.375rem;
+    height: 9.375rem;
+    margin-right: 15px;
+  }
+  .settings__header::before {
+    content: "";
+    height: 25rem;
+  }
+  .settings__greetings {
+    font-size: 1.5rem;
+  }
+}
+
+/* 520 */
+
+@media (max-width: 32.5em) {
+  .settings__header {
+    padding: 0.9375rem 0.9375rem 0rem 0.9375rem;
+  }
+}
+
+/* 480 */
+
+@media (max-width: 30em) {
+  .settings__user {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .settings__header {
+    margin-bottom: 1.5625rem;
+  }
+  .settings__greetings {
+    font-size: 1.3125em;
+  }
+  .settings__avatar {
+    max-width: 7.5rem;
+    height: 7.5rem;
+    margin-right: 0rem;
+  }
+}

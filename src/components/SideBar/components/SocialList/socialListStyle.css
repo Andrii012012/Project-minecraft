@@ -1,0 +1,43 @@
+.social-sidebar {
+  padding: 5px;
+  width: 100%;
+}
+
+.social-sidebar__item p {
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.social-sidebar__item {
+  width: 100%;
+  text-align: center;
+  font-size: 1.3125rem;
+  line-height: 1.58em;
+  color: #fff;
+  margin-bottom: 0.625rem;
+  padding-bottom: 0.625rem;
+  cursor: pointer;
+}
+
+.social-sidebar__network-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.social-sidebar__item {
+  border-top-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.social-sidebar__name-network {
+  transition: 0.3s linear;
+}
+
+.social-sidebar__item:hover .social-sidebar__name-network {
+  transition: 0.3s linear;
+  transform: translateX(4%);
+}

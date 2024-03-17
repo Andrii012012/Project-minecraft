@@ -1,0 +1,17 @@
+/* 640 */
+
+@media (max-width: 40em) {
+  .buy-monay__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .buy-monay__wrapper {
+    text-align: center;
+  }
+  .buy-monay__info-percent {
+    margin-bottom: 1.5625rem;
+  }
+  .buy-monay__info-about-pay {
+    margin-bottom: 0.625rem;
+  }
+}

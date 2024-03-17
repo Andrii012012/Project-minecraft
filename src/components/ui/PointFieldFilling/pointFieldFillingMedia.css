@@ -1,0 +1,29 @@
+/* 920 */
+
+@media (max-width: 57.5em) {
+  .point-field-filling__body-field {
+    width: 100%;
+  }
+  .point-field-filling__info {
+    margin-bottom: 0.625rem;
+  }
+  .point-field-filling__text {
+    max-width: inherit;
+  }
+}
+
+/* 480 */
+
+@media (max-width: 30em) {
+  .point-field-filling__point {
+    width: 70px;
+    font-size: 1.75rem;
+    height: 70px;
+  }
+  .point-field-filling__point-title {
+    font-size: 1rem;
+  }
+  .point-field-filling__text {
+    font-size: 0.875rem;
+  }
+}

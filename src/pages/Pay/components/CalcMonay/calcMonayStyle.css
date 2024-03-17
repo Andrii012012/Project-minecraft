@@ -1,0 +1,57 @@
+.buy-monay__info {
+  line-height: 1.3em;
+}
+
+.buy-monay__info-about-pay {
+  margin-bottom: 1.5625rem;
+}
+
+.buy-monay__wrapper {
+  display: flex;
+}
+
+.buy-monay__info {
+  flex: 1 1 50%;
+  margin-right: 1.5625rem;
+}
+
+.buy-conis__set {
+  flex: 1 1 50%;
+}
+
+.buy-monay__body-input {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5625rem;
+}
+
+.buy-monay__input {
+  padding: 0.9375rem;
+  background-color: #eee;
+  border-radius: 0.375rem;
+  font-size: 1.125rem;
+}
+
+.buy-monay__input-text {
+  position: absolute;
+  top: 0%;
+  left: 20px;
+  transform: translate(0px, -50%);
+  padding: 0px 5px;
+  letter-spacing: 0.4px;
+  font-size: 0.875rem;
+  pointer-events: none;
+  background-color: #fff;
+}
+
+.buy-monay__show-sum-coins {
+  font-size: 1.75rem;
+  line-height: 1.5em;
+  letter-spacing: 0.4px;
+  font-weight: 700;
+  color: var(--main-color);
+}
+
+.buy-monay__show-sum-coins span {
+  margin-left: 5px;
+}

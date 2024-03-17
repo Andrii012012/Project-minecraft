@@ -1,0 +1,14 @@
+
+
+.questions__lists {
+    margin-bottom: 6.25rem;
+  }
+  
+  .questions__lists:last-child {
+    margin-bottom: 0rem;
+  }
+  
+  .questions__section-name {
+    margin-bottom: 1.5625rem;
+    font-weight: 200;
+  }

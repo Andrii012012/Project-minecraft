@@ -1,0 +1,7 @@
+/* 640 */
+
+@media (max-width: 40em) {
+  .settings-profile__description-profile {
+    width: 100%;
+  }
+}

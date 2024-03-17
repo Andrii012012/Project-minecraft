@@ -1,0 +1,25 @@
+
+/* 520 */
+
+@media (max-width: 32.5em) {
+  .field-fill__point-title {
+    font-size: 1rem;
+  }
+}
+
+/* 480 */
+
+@media (max-width: 30em) {
+  .button-send {
+    width: 80%;
+  }
+}
+
+/* 380 */
+
+@media (max-width: 23.75em) {
+  .button-send {
+    font-size: 0.875rem;
+    width: 100%;
+  }
+}

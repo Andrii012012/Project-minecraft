@@ -1,0 +1,66 @@
+.sign-btn {
+  display: flex;
+  align-items: center;
+}
+
+.form-sign__btn-register::before {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 35px;
+  margin-right: 0.9375rem;
+  background: url("../../../../assets/images/component/sidebar/sidebar-icon-user-push.svg");
+  background-size: 35px;
+  background-repeat: no-repeat;
+}
+
+.form-sign__btn-recovery::before {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 35px;
+  margin-right: 0.9375rem;
+  background: url("../../../../assets/images/component/sidebar/sidebar-icon-recovery.svg");
+  background-size: 35px;
+  background-repeat: no-repeat;
+}
+
+.form-sign__input-login {
+  margin-bottom: 0.625rem;
+}
+
+.form-sign__input-pass {
+  margin-bottom: 1.25rem;
+}
+
+.form-sign {
+  width: 100%;
+}
+
+.form-sign__field {
+  width: 95% !important;
+}
+
+.from-sign__wrapper {
+  text-align: center;
+}
+
+.sign-btn--seafoam-green {
+  background-color: var(--seafoam-green);
+}
+
+.sign-btn--seafoam-green:hover {
+  background-color: rgba(128, 189, 158, 0.8);
+}
+
+.sign-btn--main-color {
+  background-color: var(--main-color);
+}
+
+.sign-btn--main-color:hover {
+  background-color: rgba(255, 66, 14, 0.8);
+}
+
+.form-sign__btn-sign{
+  width: 95% !important;
+}

@@ -1,0 +1,67 @@
+.buy-coins {
+  width: 100%;
+  background-color: #fff;
+}
+
+.buy-coins__content {
+  position: relative;
+  z-index: 10;
+}
+
+.buy-coins___section {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  border: 1px solid #eee;
+  padding: 1.25rem;
+  margin-bottom: 3.125rem;
+}
+
+.buy-coins__select {
+  margin-bottom: 3.125rem;
+}
+
+.buy-coins__body-exchange {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.buy-coins__title {
+  margin-bottom: 1.5625rem;
+  font-size: 1.75rem;
+  line-height: 1em;
+}
+
+.buy-coins__info-exchange {
+  background-color: #eee;
+  display: inline-block;
+  padding: 15px;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 1.5625rem;
+}
+
+.buy-coins__exchange {
+  margin-bottom: 3.125rem;
+}
+
+.buy-coins__prices span {
+  font-weight: 700;
+}
+
+.buy-coins__exchange {
+  margin-bottom: 1.5625rem;
+}
+
+.buy-coins__promotions {
+  margin-bottom: 1.5625rem;
+  width: 100%;
+}
+
+.buy-coins__results {
+  font-size: 1.125rem;
+  line-height: 1.3em;
+  margin-bottom: 1.5625rem;
+  text-align: center;
+}

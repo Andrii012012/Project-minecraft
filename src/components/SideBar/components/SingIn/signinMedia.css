@@ -1,0 +1,10 @@
+/* 520 */
+
+@media (max-width: 32.5em) {
+  .sidebar-social {
+    max-width: 100%;
+  }
+  .form-sign__btn-sign {
+    width: 95% !important;
+  }
+}

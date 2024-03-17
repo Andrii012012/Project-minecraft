@@ -1,0 +1,30 @@
+/* 640 */
+
+@media (max-width: 40em) {
+  .exchange__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .exchange__body-field {
+    margin-right: 0rem;
+  }
+  .exchange__body-field:last-child {
+    margin: 0px;
+  }
+}
+
+/* 480 */
+
+@media (max-width: 30em) {
+  .exchange__input {
+    font-size: 1.3125rem;
+  }
+}
+
+/* 380 */
+
+@media (max-width: 23.75em) {
+  .exchange__input {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,34 @@
+/* 640 */
+
+@media (max-width: 40em) {
+  .instructions__btn {
+    width: 50%;
+  }
+}
+
+/* 520 */
+
+@media (max-width: 32.5em) {
+  .instructions__code {
+    font-size: 0.875rem;
+  }
+  .instructions__btn {
+    font-size: 0.875rem;
+  }
+}
+
+/* 480 */
+
+@media (max-width: 30em) {
+  .change-pass {
+    margin-bottom: 3.125rem;
+  }
+}
+
+/* 380 */
+
+@media (max-width: 23.75em) {
+  .instructions__btn {
+    width: 80%;
+  }
+}

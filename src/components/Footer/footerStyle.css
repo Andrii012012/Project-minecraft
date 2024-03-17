@@ -1,0 +1,21 @@
+.footer {
+  width: 100%;
+  min-height: 300px;
+  background: #311a11;
+  position: relative;
+  z-index: 10;
+  padding: 3.125rem 0rem 3.125rem 0rem;
+}
+
+.footer__body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  flex: 1 1 auto;
+}

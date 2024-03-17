@@ -1,0 +1,17 @@
+.privilege-has__body {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 1.5625rem;
+}
+
+.privilege-has__body:last-child {
+  margin-bottom: 0rem;
+}
+
+.opportunity-privilege__image {
+  max-width: 15.625rem;
+  max-height: 15.625rem;
+  min-height: 6.25rem;
+  min-width: 6.25rem;
+  flex-basis: 30%;
+}

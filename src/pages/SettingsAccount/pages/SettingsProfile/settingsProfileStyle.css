@@ -1,0 +1,29 @@
+.settings-profile {
+  color: #000;
+  margin-bottom: 50px;
+}
+
+.setting-profile__content {
+}
+
+.settings-profile__wrapper {
+  width: 100%;
+}
+
+.settings-profile__description-profile {
+  border: 1px solid #000;
+  width: 60%;
+  padding: 0.9375rem;
+  height: 5rem;
+  font-size: 1rem;
+  line-height: 1.331rem;
+  margin-bottom: 3.125rem;
+  resize: none;
+}
+
+.settings-profile__body-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+

@@ -1,0 +1,11 @@
+.online-servers__item {
+  text-align: center;
+}
+
+.online-servers__item:last-child {
+  margin-right: 0rem;
+}
+
+.online-servers__server-name {
+  margin-bottom: 0.625rem;
+}

@@ -1,0 +1,107 @@
+.register {
+  background-color: #fff;
+}
+
+.register__header {
+  position: relative;
+  color: #fff;
+  margin-bottom: 3.125rem;
+  height: 18.75rem;
+  display: flex;
+  align-items: center;
+  padding: 3.125rem;
+}
+
+.register__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.register__image img {
+  width: 100%;
+  height: 100%;
+}
+
+.register__body {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.register__icon {
+  max-width: 7.5rem;
+  width: 100%;
+  margin-right: 0.9375rem;
+}
+
+.register__body-info {
+  align-self: flex-start;
+}
+
+.form-register__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3.125rem;
+}
+
+.form-register__item:last-child {
+  margin-bottom: 0rem;
+}
+
+.register__title{
+    margin-bottom: 5px;
+}
+
+.form-register__body-info {
+  display: flex;
+  align-items: center;
+  flex: 1 1 50%;
+}
+
+.form-register__body-field {
+  flex: 1 1 auto;
+}
+
+.form-register__info {
+  max-width: 15.9375rem;
+  width: 100%;
+}
+
+.form-register__point {
+  margin-right: 0.9375rem;
+}
+
+.form-register__point-title {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.form-register__lists {
+  margin-bottom: 3.125rem;
+}
+
+.form-register__agree {
+  margin-bottom: 1.5625rem;
+  text-align: center;
+}
+
+.form-register__send {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-register__agree {
+  max-width: 36rem;
+  line-height: 1.25em;
+}
+
+.form-register__agree span {
+  color: var(--seafoam-green);
+}

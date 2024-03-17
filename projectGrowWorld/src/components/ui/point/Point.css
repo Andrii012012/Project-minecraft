@@ -1,0 +1,14 @@
+
+
+.point{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--lime-green);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+}

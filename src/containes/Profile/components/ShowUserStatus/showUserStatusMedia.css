@@ -1,0 +1,32 @@
+/* 520 */
+
+@media (max-width: 32.5em) {
+  .profile__body-user {
+    padding: 0rem 0.9375rem;
+    margin: -4.6875rem 0rem 0.625rem 0rem;
+  }
+}
+
+/* 480 */
+
+@media (max-width: 30em) {
+  .profile__body-user-info {
+    transform: translateY(0%);
+    flex-direction: column;
+  }
+  .profile__username {
+    color: #fff;
+    margin: 0rem 0.625rem 0.9375rem 0rem;
+  }
+  .profile__body-user {
+    align-items: center;
+  }
+}
+
+/* 380 */
+
+@media (max-width: 23.75em) {
+  .profile__username {
+    font-size: 1.125rem;
+  }
+}

@@ -1,0 +1,7 @@
+/* 480 */
+
+@media (max-width: 40em) {
+  .footer__item {
+    font-size: 1rem;
+  }
+}

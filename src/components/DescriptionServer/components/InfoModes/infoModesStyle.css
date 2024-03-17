@@ -1,0 +1,40 @@
+.about-mods {
+  background: #fff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  padding: 1.25rem;
+}
+
+.about-mods__title {
+  font-size: 1.5rem;
+  line-height: 1.5em;
+  margin-bottom: 1.5625rem;
+}
+
+.about-mods__item {
+  padding: 1.25rem;
+  width: 100%;
+  margin-bottom: 0.625rem;
+  background-color: rgba(128, 189, 158, 0.5);
+  display: flex;
+}
+
+.about-mods__item:last-child {
+  margin-bottom: 0rem;
+}
+
+.about-mods__icon {
+  margin-right: 1.5625rem;
+  object-fit: contain;
+}
+
+.about-mods__name-mode {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  line-height: 1.3em;
+}
+
+.about-mods__description-mode {
+  line-height: 1.3em;
+}

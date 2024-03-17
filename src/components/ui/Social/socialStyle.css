@@ -1,0 +1,52 @@
+.social {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.social__item {
+  margin-right: 0.9375rem;
+  width: 42px;
+  height: 42px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--coral);
+}
+
+.social__item:last-child {
+  margin-right: 0rem;
+}
+
+.social__icon {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.social__body {
+  display: flex;
+}
+
+.social-discord {
+  background-color: #635adf;
+}
+
+.social-vk {
+  background-color: #9cd1ff;
+}
+
+.social-telegram {
+  background-color: #6b91fa;
+}
+
+.social__text {
+  margin-bottom: 0.9375rem;
+  font-size: 1.125rem;
+  font-weight: 200;
+}
