@@ -3,7 +3,7 @@ import "./settingsProfileStyle.css";
 import "./settingsProfileMedia.css";
 import ButtonSend from "../../../../components/ui/ButtonSend/ButtonSend";
 import { useState } from "react";
-import { urlBd } from "../../../../configs/urls";
+import { urlUpdata } from "../../../../configs/urls";
 import ChangeUserList from "../../components/ChangeUserList/ChangeUserList";
 import SetDescription from "../../components/SetDescription/SetDescription";
 
@@ -39,8 +39,7 @@ export default function SettingsProfile(props) {
     form.append("avatar", settings.avatar);
     form.append("skin", settings.skin);
     form.append("shortDescription", settings.shortDescription);
-    form.append("updata", true);
-    let result = await onFuncSend(urlBd, form);
+    let result = await onFuncSend(urlUpdata, form);
     if (result) {
       goHome("/");
       window.location.reload();
@@ -51,7 +50,7 @@ export default function SettingsProfile(props) {
     <form
       onSubmit={onSubmitData}
       className="settings-profile"
-      action={urlBd}
+      action={urlUpdata}
       method="post"
       encType="multipart/form-data"
     >

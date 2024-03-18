@@ -49,7 +49,7 @@ export default function SettingsAccount(props) {
                 path={SECURITY}
                 element={
                   <Security
-                  onFuncSend={onFuncSend}
+                    onFuncSend={onFuncSend}
                     user={dataUser}
                     goHome={goHome}
                   />

@@ -5,7 +5,7 @@ import imageMain from "../../assets/images/page/Register/register-image-main.png
 import incoFilling from "../../assets/images/global/icon-filling-data.svg";
 import { useContext } from "react";
 import { UserData } from "../../contexts/user";
-import { urlBd } from "../../configs/urls";
+import { urlResiterDB } from "../../configs/urls";
 import { useNavigate } from "react-router-dom";
 import AccessClosed from "../../components/AccessClosed/AccessClosed";
 import SendData from "./components/SendData/SendData";
@@ -35,7 +35,7 @@ export default function Register(props) {
             </div>
           </div>
           <div className="register__content container-content">
-          <SendData url={urlBd} goHome={getHome} onFundSend={onFundSend}/>
+          <SendData url={urlResiterDB} goHome={getHome} onFundSend={onFundSend}/>
           </div>
         </section>
       </main>

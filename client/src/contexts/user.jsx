@@ -19,27 +19,30 @@ function ContextUserData({ children }) {
 
   async function setDataUser(urlBd, form) {
     const dataUser = await callingServer(urlBd, form);
-     let { data } = dataUser;
-    if (typeof dataUser.data !== "string") {
-      setData((prevState) => {
-        const newData = { ...prevState };
-        newData.user = data;
-        newData.user.date = Number(data.date);
-        newData.isActive = true;
-        newData.loading = true;
-        return newData;
-      });
+    let { data } = dataUser;
+    console.log(data);
+    if (data) {
+      if (typeof data !== "string") {
+        setData((prevState) => {
+          const newData = { ...prevState };
+          newData.user = data;
+          newData.user.date = Number(data.date);
+          newData.isActive = true;
+          newData.loading = true;
+          return newData;
+        });
 
-      return true;
-    } else {
-      dataUser.data.length > 0 && showAlert(data);
-      setData((prevState) => {
-        const newData = { ...prevState };
-        newData.loading = false;
-        return newData;
-      });
+        return true;
+      } else {
+        dataUser.data.length > 0 && showAlert(data);
+        setData((prevState) => {
+          const newData = { ...prevState };
+          newData.loading = false;
+          return newData;
+        });
 
-      return false;
+        return false;
+      }
     }
   }
 

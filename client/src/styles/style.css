@@ -142,7 +142,7 @@ h6 {
   visibility: hidden;
   padding: 1.25rem;
   font-size: 1.125rem;
-  z-index: 15;
+  z-index: 999;
   background-color: rgba(249, 136, 102, 0.5);
   transition: 0.8s linear;
   display: flex;

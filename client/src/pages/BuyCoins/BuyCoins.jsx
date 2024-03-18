@@ -9,7 +9,7 @@ import Selecting from "../../components/Selecting/Selecting";
 import { dataServers } from "../../contexts/dataServers";
 import SelectOffer from "../../components/SelectOffer/SelectOffer";
 import changePrice from "../../utils/calculationBonus";
-import { urlBd } from "../../configs/urls";
+import { urlBuyGameMonay } from "../../configs/urls";
 import { useNavigate } from "react-router-dom";
 import CalcMonay from "./components/CalcMonay/CalcMonay";
 import SendData from "./components/SendData/SendData";
@@ -97,7 +97,7 @@ export default function BuyCoins(props) {
                 </p>
                 {exchange.server && (
                   <SendData
-                    url={urlBd}
+                    url={urlBuyGameMonay}
                     dataUser={dataUser}
                     goHome={goHome}
                     value={exchange}

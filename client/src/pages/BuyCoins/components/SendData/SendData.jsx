@@ -10,7 +10,6 @@ export default function SendData(props) {
     e.preventDefault();
     const form = new FormData();
     form.append("id", dataUser.id);
-    form.append("buyGameMoney", true);
     form.append("coins", value.bonus);
     form.append("monay", dataUser.coins);
     form.append("minusMonay", value.fieldMoney);

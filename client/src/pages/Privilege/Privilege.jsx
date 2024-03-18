@@ -16,7 +16,7 @@ import {
   DISCOUNT,
   DURATION_PRIVILEGE,
 } from "../../constants/donate.js";
-import { urlBd } from "../../configs/urls.js";
+import { urlBuyPrivilege } from "../../configs/urls.js";
 
 export default function Privilege(props) {
   let {} = props;
@@ -97,7 +97,7 @@ export default function Privilege(props) {
               <SendData
                 onFuncSend={onFuncSend}
                 data={buyPrivilege}
-                url={urlBd}
+                url={urlBuyPrivilege}
                 dataUser={dataUser}
               />
             ) : null}

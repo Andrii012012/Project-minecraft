@@ -11,7 +11,6 @@ export default function SendData(props) {
   async function onSubmitData(e) {
     e.preventDefault();
     const form = new FormData();
-    form.append("buyPrivilege", true);
     form.append("id", dataUser.id);
     form.append("server", data.server);
     form.append("serverId", data.serverId);

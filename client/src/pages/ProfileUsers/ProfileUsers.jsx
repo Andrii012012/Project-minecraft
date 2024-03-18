@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import Profile from "../../containes/Profile/Profile.jsx";
 import { useContext, useEffect } from "react";
 import { CallUser } from "../../contexts/getUser.jsx";
-import { urlBd } from "../../configs/urls.js";
+import { urlGetUser } from "../../configs/urls.js";
 import Error from "../Error/Error.jsx";
 
 export default function ProfileUsers(props) {
@@ -16,7 +16,7 @@ export default function ProfileUsers(props) {
   async function onSubmitData() {
     const form = new FormData();
     form.append("getUser", value.id);
-    onFuncGetUser(urlBd, form);
+    onFuncGetUser(urlGetUser, form);
   }
   useEffect(() => {
     onSubmitData();

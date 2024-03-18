@@ -23,7 +23,6 @@ export default function SendData(props) {
     dataForm.append("email", valueField.email);
     dataForm.append("password", valueField.password);
     dataForm.append("date", new Date().getTime());
-    dataForm.append("register", true);
     let result = validation(document.querySelectorAll(".register .field"));
     if (result) {
       onFundSend(url, dataForm);

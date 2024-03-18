@@ -5,7 +5,7 @@ import ButtonSend from "../../../ui/ButtonSend/ButtonSend";
 import { NavLink } from "react-router-dom";
 import Field from "../../../ui/Field/Field";
 import { useState } from "react";
-import { urlBd } from "../../../../configs/urls";
+import { urlBd, urlSignBD } from "../../../../configs/urls";
 import { RECOVERY_ROUTE, REGISTER_ROUTE } from "../../../../routers/routes";
 
 export default function SignIn(props) {
@@ -21,13 +21,12 @@ export default function SignIn(props) {
     let form = new FormData();
     form.append("login", value.login);
     form.append("password", value.password);
-    form.append("sign", true);
-    onFuncSend(urlBd, form);
+    onFuncSend(urlSignBD, form);
   }
 
   return (
     <form
-      action={urlBd}
+      action={urlSignBD}
       onSubmit={onSubmitData}
       method="post"
       name="auth"

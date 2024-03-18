@@ -1,7 +1,7 @@
 import React from "react";
 import "./securityStyle.css";
 import "./securityMedia.css";
-import { urlBd } from "../../../../configs/urls";
+import { urlUpdataPassword } from "../../../../configs/urls";
 import FormUpdataPassword from "../../components/FormUpdataPassword/FormUpdataPassword";
 import Protection from "../../components/Protection/Protection";
 
@@ -14,8 +14,8 @@ export default function Security(props) {
       <FormUpdataPassword
         goHome={goHome}
         onFuncSend={onFuncSend}
-        url={urlBd}
-        dataUser={user}
+        url={urlUpdataPassword}
+        id={user.id}
       />
       <Protection name={user.login} />
     </div>

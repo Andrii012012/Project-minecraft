@@ -2,11 +2,12 @@ import React from "react";
 import "./formUpdataPasswordStyle.css";
 import "./formUpdataPasswordMedia.css";
 import { useState } from "react";
-import BlockField from "../../../../components/ui/PointFieldGroup/PointFieldGroup";
+import PointFieldGroup from "../../../../components/ui/PointFieldGroup/PointFieldGroup";
+import PointFieldFilling from "../../../../components/ui/PointFieldFilling/PointFieldFilling";
 import ButtonSend from "../../../../components/ui/ButtonSend/ButtonSend";
 
 export default function FormUpdataPassword(props) {
-  let { url, goHome, onFuncSend, dataUser } = props;
+  let { url, goHome, onFuncSend, id } = props;
 
   const [valueField, setValueField] = useState({
     oldPassword: "",
@@ -17,10 +18,9 @@ export default function FormUpdataPassword(props) {
   async function onSubmitChagenData(e) {
     e.preventDefault();
     const form = new FormData();
-    form.append("id", dataUser.id);
+    form.append("id", id);
     form.append("oldPassword", valueField.oldPassword);
     form.append("newPassword", valueField.newPassword);
-    form.append("updata", true);
     let result = await onFuncSend(url, form);
     if (result) {
       goHome("/");
@@ -39,36 +39,36 @@ export default function FormUpdataPassword(props) {
       >
         <div className="settings-security__wrapper">
           <ul className="settings-security__lists">
-            <BlockField
-              title="Введите старый пароль"
-              number="1"
-              type="password"
-              name="old-password"
-              background="#ff420e"
-              valueField={valueField.oldPassword}
-              setValueField={setValueField}
-              changeThing="oldPassword"
-            />
-            <BlockField
-              title="Введите новый пароль"
-              number="2"
-              type="password"
-              name="new-password"
-              background="#80bd9e"
-              valueField={valueField.newPassword}
-              setValueField={setValueField}
-              changeThing="newPassword"
-            />
-            <BlockField
-              title="Введите повторно новый пароль"
-              number="3"
-              type="password"
-              name="repeat-new-password"
-              background="#f98866"
-              valueField={valueField.repeatNewPassword}
-              setValueField={setValueField}
-              changeThing="repeatNewPassword"
-            />
+            <PointFieldGroup number="1" background="#ff420e">
+              <PointFieldFilling
+                title="Введите старый пароль"
+                type="password"
+                name="old-password"
+                value={valueField.oldPassword}
+                setValue={setValueField}
+                changeKey="oldPassword"
+              />
+            </PointFieldGroup>
+            <PointFieldGroup number="2" background="#80bd9e">
+              <PointFieldFilling
+                title="Введите новый пароль"
+                type="password"
+                name="new-password"
+                value={valueField.newPassword}
+                setValue={setValueField}
+                changeKey="newPassword"
+              />
+            </PointFieldGroup>
+            <PointFieldGroup number="3" background="#f98866">
+              <PointFieldFilling
+                title="Введите повторно новый пароль"
+                type="password"
+                name="repeat-new-password"
+                value={valueField.repeatNewPassword}
+                setValue={setValueField}
+                changeKey="repeatNewPassword"
+              />
+            </PointFieldGroup>
           </ul>
           <div className="settings-security__body-btn">
             <ButtonSend

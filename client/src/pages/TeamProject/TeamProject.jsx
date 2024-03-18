@@ -3,7 +3,7 @@ import "./teamProjectStyle.css";
 import "./teamProjectMedia.css";
 import { useEffect, useContext } from "react";
 import { UsersDatas } from "../../contexts/users";
-import { urlBd } from "../../configs/urls";
+import { urlGetTeamProject } from "../../configs/urls";
 import { useNavigate } from "react-router-dom";
 import ServersMainCraft from "./components/ServersMainCraft/ServersMainCraft";
 import SeniorTeamProject from "./components/SeniorTeamProject/SeniorTeamProject";
@@ -23,8 +23,7 @@ export default function TeamProject(props) {
 
   useEffect(() => {
     const dataForm = new FormData();
-    dataForm.append("status", true);
-    getUsers(urlBd, dataForm);
+    getUsers(urlGetTeamProject, dataForm);
   }, []);
 
   if (getDataUsers.users) {

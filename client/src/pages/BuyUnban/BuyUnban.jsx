@@ -6,7 +6,7 @@ import { useContext, useState } from "react";
 import { UserData } from "../../contexts/user";
 import { CABINET_ROUTE } from "../../routers/routes";
 import Selecting from "../../components/Selecting/Selecting";
-import { urlBd } from "../../configs/urls";
+import { urlBuyUnban } from "../../configs/urls";
 import AccessClosed from "../../components/AccessClosed/AccessClosed";
 import { useNavigate } from "react-router-dom";
 import SendData from "./components/SendData/SendData";
@@ -58,7 +58,7 @@ export default function BuyUnban(props) {
                 Покупка разбана стоит - {dataSend.unban} гривен
               </p>
               {dataSend.server && (
-                <SendData url={urlBd} id={id} goHome={goHome} data={dataSend} onFuncSend={onFuncSend}/>
+                <SendData url={urlBuyUnban} id={id} goHome={goHome} data={dataSend} onFuncSend={onFuncSend}/>
               )}
             </div>
           </section>

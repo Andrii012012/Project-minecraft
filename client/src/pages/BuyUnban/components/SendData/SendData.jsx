@@ -9,15 +9,12 @@ export default function SendData(props) {
   async function onSendData(e) {
     e.preventDefault();
     const form = new FormData();
-    form.append("buyUnban", true);
     form.append("id", id);
     form.append("server", data.server);
     form.append("serverId", data.serverId);
     form.append("costUnban", data.unban);
     let result = await onFuncSend(url, form);
-    console.log(result);
     if (result) {
-      console.log(result);
       goHome("/");
       window.location.reload();
     }

@@ -17,8 +17,6 @@ function updata($connect){
      $avatar = $_FILES['avatar'];
      $skin = $_FILES['skin'];
      $description = $_POST['shortDescription'];
-     $old_password = $_POST['oldPassword'];
-     $new_password = $_POST['newPassword'];
 
      function getData($data){
       $json = json_encode($data);
@@ -27,20 +25,6 @@ function updata($connect){
 
        exit();
      }
-
-     $result_connect_data_users = mysqli_query($connect, "SELECT * FROM `data_users` WHERE id='$id'");
-     $user = mysqli_fetch_assoc($result_connect_data_users);
-
-      if(!empty($old_password) && !empty($new_password)){
-         $password = $user['password'];
-          if(md5($old_password) == $password){
-             $new_password = filter_var(md5($new_password));
-              mysqli_query($connect, "UPDATE `data_users` SET `password` = '$new_password' WHERE `id` = $id");
-          } else {
-             echo $WRONG_PASSWORD;
-             exit();
-          }
-      }
 
       if($description){
          if(strlen($description) > 100){

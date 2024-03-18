@@ -31,11 +31,3 @@
     height: 70px;
   }
 }
-
-/* 380 */
-
-@media (max-width: 23.75em) {
-  .field-fill__point {
-    flex: 1 1 30%;
-  }
-}
