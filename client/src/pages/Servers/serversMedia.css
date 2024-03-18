@@ -1,0 +1,43 @@
+/* 640 */
+
+@media (max-width: 520px) {
+  .servers__header {
+    padding: 0rem 0.9375rem 0rem 0.9375rem;
+  }
+
+  .servers__image img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .servers__img {
+    align-self: center;
+  }
+
+  .server-description__icon {
+    margin-right: 0rem;
+  }
+}
+
+/* 380 */
+
+@media (max-width: 380px) {
+  .servers__image img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .servers__img {
+    display: none;
+  }
+
+  .servers__body-info {
+    z-index: 10;
+    color: #fff;
+    backdrop-filter: blur(15px);
+    background: rgba(8, 148, 212, 0.3);
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+  }
+}

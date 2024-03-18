@@ -1,9 +1,0 @@
-/* 480 */
-
-@media (max-width: 30em) {
-  .select-thing__title {
-    font-size: 18px;
-    line-height: 1.3em;
-    margin-bottom: 0.9375rem;
-}
-}

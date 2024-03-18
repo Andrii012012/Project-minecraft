@@ -1,0 +1,32 @@
+.questions {
+  width: 100%;
+  background-color: #fff;
+}
+
+.questions__body {
+  position: relative;
+  margin-bottom: 3.125rem;
+}
+
+.questions__body img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 31.25rem;
+}
+
+.questions__body-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  padding: 0.625rem;
+  text-align: center;
+  background: rgba(8, 148, 212, 0.3);
+  backdrop-filter: blur(6px);
+}
+
+.question__title {
+  margin-bottom: 0.625rem;
+}
