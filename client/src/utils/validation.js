@@ -1,4 +1,4 @@
-import showAlert from "./showAlert";
+import showAlert from "./showAlert.js";
 import {
   REPEAET_PASSWORD_ERROR,
   LOGIN_LENGTH_ERROR_MAX,

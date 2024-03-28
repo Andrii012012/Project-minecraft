@@ -20,7 +20,6 @@ function ContextUserData({ children }) {
   async function setDataUser(urlBd, form) {
     const dataUser = await callingServer(urlBd, form);
     let { data } = dataUser;
-    console.log(data);
     if (data) {
       if (typeof data !== "string") {
         setData((prevState) => {

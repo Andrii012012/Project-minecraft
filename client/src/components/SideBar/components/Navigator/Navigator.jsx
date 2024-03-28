@@ -49,7 +49,7 @@ export default function Navigator(props) {
       <nav>
         <ul className="lists-items">
           {MENU_ITEM.map((item, _) => (
-            <ListNav
+            <ListNav key={item.text}
               path={item.path}
               target={item.target}
               href={item.href}
