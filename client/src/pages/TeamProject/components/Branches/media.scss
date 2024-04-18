@@ -1,0 +1,11 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+@use "../../../../utils/helpScss/breakpoints.scss" as b;
+
+@media (max-width: map-get(b.$breakpoints, "phone")) {
+  .sarverName {
+    font-size: f.rem(18);
+  }
+  .sectionName {
+    margin-bottom: f.rem(25);
+  }
+}

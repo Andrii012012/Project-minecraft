@@ -1,0 +1,33 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+
+.itemNavigator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: f.rem(20);
+  margin-right: f.rem(5);
+  &:hover .itemIcon {
+    animation-name: animationNavIcon;
+    animation-duration: 0.8s;
+  }
+}
+
+.itemIcon {
+  margin-bottom: f.rem(10);
+  width: 60px;
+  height: 60px;
+}
+
+@keyframes animationNavIcon {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@import "./media.scss";

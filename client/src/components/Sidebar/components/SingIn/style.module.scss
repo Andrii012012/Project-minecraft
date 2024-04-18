@@ -1,0 +1,102 @@
+@use "sass:map";
+@use "../../../../styles/style.module.scss" as c;
+@use "../../../../utils/helpScss/functions.scss" as f;
+
+.btnRegister {
+  color: #fff;
+  transition: 0.3s linear;
+  &::before {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 35px;
+    margin-right: f.rem(15);
+    background: url("../../../../assets/images/component/sidebar/sidebar-icon-user-push.svg");
+    background-size: 35px;
+    background-repeat: no-repeat;
+  }
+  background-color: map-get(c.$colors, "orange-red");
+  &:hover {
+    transition: 0.3s linear;
+    background-color: map-get(c.$colors, "orange-red-opacity");
+  }
+  padding: f.rem(12);
+  display: flex;
+  align-items: center;
+}
+
+.btnRecovery {
+  color: #fff;
+  transition: 0.3s linear;
+  &::before {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 35px;
+    margin-right: f.rem(15);
+    background: url("../../../../assets/images/component/sidebar/sidebar-icon-recovery.svg");
+    background-size: 35px;
+    background-repeat: no-repeat;
+    padding: f.rem(12);
+    display: flex;
+    align-items: center;
+  }
+  padding: f.rem(12);
+  display: flex;
+  align-items: center;
+  background-color: map-get(c.$colors, "seafoam-green");
+  &:hover {
+    transition: 0.3s linear;
+    background-color: map-get(c.$colors, "seafoam-green-opacity");
+  }
+}
+
+.field {
+  width: 95% !important;
+}
+
+.inputLogin {
+  margin-bottom: f.rem(10);
+  composes: field;
+}
+
+.inputPass {
+  margin-bottom: f.rem(20);
+  composes: field;
+}
+
+.form {
+  width: 100%;
+}
+
+.wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.btnContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  background-color: map-get(c.$colors, "lime-green");
+  color: #fff;
+  &:hover {
+    background-color: map-get(c.$colors, "lime-green-opacity");
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95% !important;
+  margin-bottom: f.rem(20);
+  text-align: center;
+}
+
+.containerBtnSign {
+  display: flex;
+  justify-content: center;
+}
+
+@import "./media.scss";

@@ -1,0 +1,66 @@
+@use "../../utils/helpScss/functions.scss" as f;
+
+.opportunityPrivilege {
+  width: 100%;
+  background-color: #fff;
+}
+
+.header {
+  padding: f.rem(50);
+  background-color: rgba(255, 66, 14, 0.8);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: f.rem(50);
+}
+
+.image {
+  max-width: f.rem(250);
+  width: 100%;
+  max-height: f.rem(250);
+}
+
+.subtitle {
+  margin-bottom: f.rem(25);
+}
+
+.body {
+  flex-basis: 70%;
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: f.rem(25);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.image {
+  max-width: f.rem(250);
+  max-height: f.rem(250);
+  min-height: f.rem(100);
+  min-width: f.rem(100);
+  flex-basis: 30%;
+}
+
+.privilegeHas {
+  width: 100%;
+  background: #fff;
+  border-radius: f.rem(10);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  padding: f.rem(20);
+}
+
+.title {
+  margin-bottom: f.rem(25);
+}
+
+.privilegeTitle {
+  margin-bottom: f.rem(25);
+}
+
+.item {
+  border: 1px solid #000;
+  padding: 10px;
+  background-color: #eee;
+}
+
+@import "./media.scss";

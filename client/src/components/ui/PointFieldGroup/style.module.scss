@@ -1,0 +1,27 @@
+@use "../../../utils/helpScss/functions.scss" as f;
+
+.fieldFill {
+  display: flex;
+  align-items: center;
+  margin-bottom: f.rem(50);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.bodyInfo {
+  display: flex;
+  align-items: center;
+}
+
+.point {
+  margin-right: f.rem(15);
+}
+
+.point {
+  width: 90px;
+  font-size: f.rem(46);
+  height: 90px;
+}
+
+@import "./media.scss";

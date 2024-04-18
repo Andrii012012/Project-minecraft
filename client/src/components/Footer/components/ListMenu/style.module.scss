@@ -1,0 +1,28 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+@use '../../../../styles/style.module.scss' as c;
+
+.title {
+  margin-bottom: f.rem(25);
+  color: #fff;
+  font-weight: 700;
+}
+
+
+.listBlock {
+  flex: 1 1 5%;
+  position: relative;
+  margin-right: f.rem(25);
+  &::before {
+    content: "";
+    display: block;
+    width: 1.5px;
+    height: 100%;
+    margin: 0 -50px;
+    background-color: map-get(c.$colors, 'coral-opacity');
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+@import "./media.scss";

@@ -1,0 +1,17 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+
+.itemPlaySystem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+  padding: f.rem(10);
+  cursor: pointer;
+  img {
+    max-width: f.rem(120);
+    max-height: f.rem(120);
+  }
+}
+
+@import "./media.scss";

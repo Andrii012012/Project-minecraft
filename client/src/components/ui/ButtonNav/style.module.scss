@@ -1,0 +1,14 @@
+@use "../../../utils/helpScss/functions.scss" as f;
+
+.btn {
+  border-radius: f.rem(6);
+  text-transform: uppercase;
+  text-align: center;
+  transition: 0.3s linear;
+  :hover {
+    transition: 0.3s linear;
+    transform: scale(1.05);
+  }
+}
+
+@import "./media.scss";

@@ -1,0 +1,71 @@
+@use "../../../utils/helpScss/functions.scss" as f;
+
+.accordion {
+  padding: f.rem(15);
+  background-color: #fff;
+  border-radius: f.rem(6);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+  margin-bottom: f.rem(25);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.accordionWrapper {
+  max-height: 0px;
+  overflow: hidden;
+  transition: 0.3s linear;
+}
+
+.activeAccordion {
+  .accordionWrapper {
+    visibility: visible;
+  }
+  .wapperIcon img {
+    transition: 0.3s linear;
+    transform: rotate(-180deg);
+  }
+  .header {
+    transition: 0.3s linear;
+    margin-bottom: f.rem(5);
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  transition: 0.3s linear;
+}
+
+.title {
+  flex: 1 1 auto;
+  padding-right: f.rem(8);
+}
+
+.wapperIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #eee;
+  width: f.rem(25);
+  height: f.rem(25);
+  img {
+    transition: 0.3s linear;
+    width: f.rem(20);
+    height: f.rem(20);
+  }
+}
+
+.wapperIcon img {
+  transition: 0.3s linear;
+  width: f.rem(20);
+  height: f.rem(20);
+}
+
+.text {
+  font-size: f.rem(14);
+  line-height: f.em(14, 12);
+}
+
+@import './media.scss';

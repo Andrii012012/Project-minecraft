@@ -1,0 +1,16 @@
+@use '../../../../styles/style.module.scss' as c;
+@use '../../../../utils/helpScss/functions.scss' as f;
+
+.item {
+  margin-bottom: f.rem(10);
+  a {
+    color: map-get(c.$colors, 'coral');
+    transition: 0.3s linear;
+    &:hover {
+      transition: 0.3s linear;
+      color: rgba(255, 127, 80, 0.8);
+    }
+  }
+}
+
+@import './media.scss';

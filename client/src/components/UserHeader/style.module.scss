@@ -1,0 +1,66 @@
+@use "../../utils/helpScss/functions.scss" as f;
+@use "../../styles/style.module.scss" as c;
+
+.header {
+  position: relative;
+  padding: f.rem(50) f.rem(50) 0 f.rem(50);
+  color: #fff;
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: f.rem(300);
+    background-color: map-get(c.$colors, "orange-red");
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.wrapper {
+  position: relative;
+  z-index: 10;
+  display: flex;
+}
+
+.avatar {
+  img {
+    width: f.rem(200);
+    height: f.rem(200);
+  }
+}
+
+.userInfo {
+  display: flex;
+}
+
+.avatar {
+  margin-right: f.rem(50);
+}
+
+.title {
+  margin-bottom: f.rem(5);
+}
+
+.greetings {
+  margin-bottom: f.rem(3);
+}
+
+.name {
+  font-weight: 500;
+  font-size: f.rem(21);
+  line-height: f.em(21, 14);
+}
+
+.return {
+  display: inline-block;
+  font-size: f.rem(21);
+  color: #fff;
+  letter-spacing: 0.6px;
+  background-color: rgba(249, 136, 102, 0.5);
+  padding: f.rem(10) f.rem(30);
+  margin-top: f.rem(15);
+  border-radius: f.rem(8);
+}
+
+@import "./media.scss";

@@ -1,0 +1,13 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(f.rem(250), 1fr));
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: f.rem(20);
+  margin-bottom: f.rem(50);
+}
+
+@import './media.scss';

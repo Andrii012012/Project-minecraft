@@ -1,0 +1,18 @@
+@use "../../utils/helpScss/breakpoints.scss" as b;
+@use "../../utils/helpScss/functions.scss" as f;
+
+@media (max-width: map-get(b.$breakpoints, "desktopLandscape")) {
+  .body {
+    flex-direction: column;
+  }
+  .logo {
+    margin-bottom: f.rem(50);
+  }
+}
+
+@media (max-width: map-get(b.$breakpoints, "phoneLandscapeExtra")) {
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+}

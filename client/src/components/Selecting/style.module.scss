@@ -1,0 +1,23 @@
+@use "../../utils/helpScss/functions.scss" as f;
+
+.selecting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  border: 1px solid #eee;
+  padding: f.rem(20);
+  h2 {
+    text-align: center;
+    margin-bottom: f.rem(15);
+    :after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2.5px;
+      margin-top: f.rem(5);
+    }
+  }
+}
+@import "./media.scss";

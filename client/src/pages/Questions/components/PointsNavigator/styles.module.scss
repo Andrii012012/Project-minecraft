@@ -1,0 +1,14 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+
+.bodySection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(f.rem(250), 1fr));
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: f.rem(20);
+  margin-bottom: f.rem(100);
+}
+
+@import './media.scss';

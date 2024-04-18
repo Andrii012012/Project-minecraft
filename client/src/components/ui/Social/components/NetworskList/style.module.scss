@@ -1,0 +1,23 @@
+@use "../../../../../utils/helpScss/functions.scss" as f;
+@use "../../../../../styles/style.module.scss" as c;
+
+.item {
+  margin-right: f.rem(15);
+  width: f.rem(42);
+  height: f.rem(42);
+  border-radius: f.rem(6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.icon {
+  width: f.rem(25);
+  height: f.rem(25);
+}
+
+@import "./media.scss";

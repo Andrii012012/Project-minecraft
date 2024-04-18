@@ -1,0 +1,70 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+@use "../../../../utils/helpScss/breakpoints.scss" as b;
+
+@media (max-width: map-get(b.$breakpoints, "phoneLandscape")) {
+  .item {
+    flex-direction: column;
+  }
+  .point {
+    margin-right: 0;
+    margin-bottom: f.rem(25);
+  }
+  .text {
+    margin-bottom: f.rem(25);
+  }
+  .point {
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+    font-size: f.rem(32);
+  }
+}
+
+@media (max-width: map-get(b.$breakpoints, "phoneLandscapeExtra")) {
+  .registerAccount {
+    &::before {
+      content: "";
+      width: 50px;
+      height: 65px;
+      background-size: 45px;
+    }
+  }
+  .downloadLauncher {
+    &::before {
+      content: "";
+      width: 55px;
+      height: 65px;
+      background-size: 45px;
+    }
+  }
+}
+
+@media (max-width: map-get(b.$breakpoints, "phone")) {
+  .point {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    min-height: 80px;
+    font-size: f.rem(28);
+  }
+  .item {
+    margin-bottom: f.rem(50);
+  }
+  .registerAccount {
+    &::before {
+      content: "";
+      width: 45px;
+      height: 60px;
+      background-size: 45px;
+    }
+  }
+  .downloadLauncher {
+    &::before {
+      content: "";
+      width: 45px;
+      height: 60px;
+      background-size: 45px;
+    }
+  }
+}

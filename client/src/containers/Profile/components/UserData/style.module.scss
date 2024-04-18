@@ -1,0 +1,38 @@
+@use '../../../../styles/style.module.scss' as c;
+@use "../../../../utils/helpScss/functions.scss" as f;
+
+.item {
+  border-radius: f.rem(6);
+  padding: f.rem(20);
+  background-color: map-get(c.$colors, 'seafoam-green');
+  color: #fff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: f.rem(15);
+  text-align: left;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 1%;
+    transform: translate(0%, -50%);
+    width: 4px;
+    border-radius: f.rem(6);
+    height: 50%;
+    display: block;
+    background-color: map-get(c.$colors, 'lime-green');
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.data{
+  text-align: center;
+}
+
+.text {
+  flex: 1 1 auto;
+}

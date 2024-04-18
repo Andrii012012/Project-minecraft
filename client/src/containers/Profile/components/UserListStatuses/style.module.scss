@@ -1,0 +1,9 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+
+.item {
+  margin-bottom: f.rem(5);
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+

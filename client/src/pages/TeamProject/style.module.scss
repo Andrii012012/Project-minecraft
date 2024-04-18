@@ -1,0 +1,13 @@
+@use "../../utils/helpScss/functions.scss" as f;
+
+.teamProject {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.title {
+  margin-bottom: f.rem(10);
+}
+
+@import "./media.scss";

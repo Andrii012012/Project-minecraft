@@ -1,0 +1,52 @@
+@use "../../utils/helpScss/functions.scss" as f;
+
+.goGame {
+  width: 100%;
+  background-color: #fff;
+  height: auto;
+  width: 100%;
+}
+
+.image {
+  width: 100%;
+  margin-bottom: f.rem(50);
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.header {
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  text-align: center;
+  color: #fff;
+  max-width: f.rem(500);
+  padding: 0 f.rem(15);
+  width: 100%;
+  text-shadow: 0.6px 1.2px 0.8px #000;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.description {
+  text-align: center;
+  margin-bottom: f.rem(100);
+}
+
+.lists {
+  margin-bottom: f.rem(100);
+}
+
+@import "./media.scss";

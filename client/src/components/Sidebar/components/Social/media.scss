@@ -1,0 +1,14 @@
+@use "../../../../utils/helpScss/breakpoints.scss" as b;
+
+
+@media (max-width: map-get(b.$breakpoints, "desktopLandscape")) {
+  .sidebarSocial {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: map-get(b.$breakpoints, "phoneLandscape")) {
+  .sidebarSocial {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,28 @@
+@use "../../../utils/helpScss/functions.scss" as f;
+@use "../../../utils/helpScss/breakpoints.scss" as b;
+
+@media (max-width: map-get(b.$breakpoints, "tablet")) {
+  .bodyField {
+    width: 100%;
+  }
+  .info {
+    margin-bottom: f.rem(10);
+  }
+  .text {
+    max-width: inherit;
+  }
+}
+
+@media (max-width: map-get(b.$breakpoints, "phoneLandscapeExtra")) {
+  .point {
+    width: 90px;
+    font-size: f.rem(28);
+    height: 90px;
+  }
+  .title {
+    font-size: f.rem(16);
+  }
+  .text {
+    font-size: f.rem(14);
+  }
+}

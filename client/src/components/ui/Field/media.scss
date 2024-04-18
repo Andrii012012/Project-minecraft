@@ -1,0 +1,15 @@
+@use "../../../utils/helpScss/functions.scss" as f;
+@use "../../../utils/helpScss/breakpoints.scss" as b;
+
+@media (max-width: map-get(b.$breakpoints, "phoneLandscape")) {
+  .field {
+    width: 100%;
+  }
+}
+
+@media (max-width: map-get(b.$breakpoints, "phone")) {
+  .field {
+    padding: f.rem(16);
+    font-size: f.rem(16);
+  }
+}

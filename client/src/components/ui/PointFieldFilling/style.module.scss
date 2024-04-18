@@ -1,0 +1,51 @@
+@use "../../../utils/helpScss/functions.scss" as f;
+@use "../../../styles/style.module.scss" as c;
+@use '../../../utils/helpScss/tamplates.scss' as *;
+
+.info {
+  flex: 1 1 auto;
+}
+
+.content {
+  padding: f.rem(50);
+}
+
+.title {
+  font-size: f.rem(18);
+  font-weight: 700;
+  margin-bottom: f.rem(10);
+}
+
+.field{
+  @extend %field;
+}
+
+.text {
+  max-width: f.rem(250);
+  display: block;
+}
+
+.list {
+  margin-bottom: f.rem(50);
+}
+
+.agree {
+  margin-bottom: f.rem(25);
+  text-align: center;
+}
+
+.send {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.agree {
+  max-width: f.rem(575);
+  span {
+    color: map-get(c.$colors, "seafoam-green");
+  }
+}
+
+@import "./media.scss";

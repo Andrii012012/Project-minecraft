@@ -1,0 +1,15 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+
+.list {
+  margin-bottom: f.rem(100);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.sectionName {
+  font-weight: 200;
+  margin-bottom: f.rem(25);
+}
+
+@import './media.scss';

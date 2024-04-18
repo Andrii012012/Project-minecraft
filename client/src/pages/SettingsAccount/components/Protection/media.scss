@@ -1,0 +1,18 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+@use "../../../../utils/helpScss/breakpoints.scss" as b;
+
+@media (max-width: map-get(b.$breakpoints, "phoneLandscape")) {
+  .btn {
+    width: 50%;
+  }
+  .code {
+    font-size: f.rem(14);
+    margin-bottom: f.rem(25);
+  }
+}
+
+@media (max-width: map-get(b.$breakpoints, "phone")) {
+  .btn {
+    width: 80%;
+  }
+}

@@ -1,0 +1,68 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+@use "../../../../styles/style.module.scss" as c;
+
+.bodyUser {
+  transform: translateY(-100%);
+  display: flex;
+  align-items: center;
+}
+
+.userName {
+  font-size: f.rem(21);
+  font-weight: 600;
+  margin: 0 f.rem(10) 0 0;
+}
+
+.status {
+  background-color: map-get(c.$colors, "orange-red");
+  color: #fff;
+  padding: f.rem(6);
+  text-align: center;
+  border-radius: f.rem(6);
+  font-size: f.rem(14);
+  font-weight: 600;
+  min-width: f.rem(100);
+  position: relative;
+  span {
+    margin-right: f.rem(5);
+  }
+}
+
+.statuses {
+  position: absolute;
+  opacity: 0;
+  transform: translate(-50%, 0%);
+  left: 50%;
+  top: 100%;
+  padding: f.rem(6);
+  border-bottom-right-radius: f.rem(6);
+  border-bottom-left-radius: f.rem(6);
+  z-index: 2;
+  background-color: map-get(c.$colors, "orange-red");
+  color: #fff;
+  visibility: hidden;
+  text-align: left;
+  width: 99.5%;
+  transition: 0.3s linear;
+  z-index: 100;
+}
+
+.activeStatus .statuses {
+  opacity: 1;
+  transition: 0.3s linear;
+  visibility: visible;
+}
+
+.statusItem {
+  margin-bottom: f.rem(5);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.activeStatus {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+@import "./media.scss";

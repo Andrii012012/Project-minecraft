@@ -1,0 +1,12 @@
+@use "../utils/helpScss/breakpoints.scss" as b;
+@use '../utils/helpScss/functions.scss' as f;
+
+@media (max-width: map-get(b.$breakpoints, "desktopLandscape")) {
+  .body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+

@@ -1,0 +1,31 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+@use "../../../../utils/helpScss/breakpoints.scss" as b;
+
+@media (max-width: map-get(b.$breakpoints, "tableLandscape")) {
+  .userName {
+    color: #fff;
+  }
+  .status {
+    margin-top: f.rem(5);
+  }
+  .bodyUser {
+    transform: translateY(0%);
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media (max-width: map-get(b.$breakpoints, "phoneLandscape")) {
+  .bodyUser {
+    padding: 0 f.rem(15);
+  }
+}
+
+@media (max-width: map-get(b.$breakpoints, "phoneLandscapeExtra")) {
+}
+
+@media (max-width: map-get(b.$breakpoints, "phone")) {
+  .userName {
+    font-size: f.rem(18);
+  }
+}

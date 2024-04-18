@@ -1,0 +1,45 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+@use "../../../../styles/style.module.scss" as c;
+
+.code {
+  padding: f.rem(15);
+  color: #fff;
+  font-weight: 500;
+  background-color: map-get(c.$colors, "orange-red");
+}
+
+.titleProtection{
+  margin-bottom: f.rem(25);
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: f.rem(25);
+}
+
+.code {
+  margin-bottom: f.rem(50);
+  line-height: f.em(16, 10.5);
+  border-radius: f.rem(6);
+  span {
+    margin-right: f.rem(3);
+  }
+}
+
+.bodyBtn {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  padding: f.rem(20);
+  background-color: map-get(c.$colors, "seafoam-green");
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: f.rem(16);
+  line-height: f.em(16, 12.8);
+}
+
+@import "./media.scss";

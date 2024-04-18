@@ -1,0 +1,37 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+
+.icon {
+  flex-basis: 50%;
+  transition: 0.3s linear;
+  img {
+    max-width: f.rem(150);
+    max-height: f.rem(100);
+  }
+}
+
+.text {
+  line-height: f.em(16, 12.8);
+  flex-basis: 50%;
+  text-align: center;
+  font-weight: 500;
+}
+
+.item {
+  padding: f.rem(10);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  border: 1px solid #eee;
+  &:hover .icon {
+    transition: 0.3s linear;
+    transform: scale(1.2);
+  }
+}
+
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #000;
+}
+
+@import "./media.scss";

@@ -1,0 +1,56 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+
+.infoPay {
+  margin-bottom: f.rem(25);
+  font-size: f.rem(16);
+  line-height: f.em(16, 12.8);
+}
+
+.wrapper {
+  display: flex;
+}
+
+.info {
+  font-size: f.rem(16);
+  line-height: f.em(16, 12.8);
+  flex: 1 1 50%;
+  margin-right: f.rem(25);
+}
+
+.buyConinSet {
+  flex: 1 1 50%;
+}
+
+.bodyInput {
+  position: relative;
+  display: inline-block;
+  margin-bottom: f.rem(25);
+}
+
+.input {
+  padding: f.rem(15);
+  background-color: #eee;
+  border-radius: f.rem(6);
+  font-size: f.rem(18);
+}
+
+.inputText {
+  position: absolute;
+  top: 0%;
+  left: f.rem(20);
+  transform: translate(0px, -50%);
+  padding: 0 f.rem(5);
+  letter-spacing: 0.4px;
+  font-size: 0.875rem;
+  pointer-events: none;
+  background-color: #fff;
+}
+
+.showCoins {
+  color: var(--main-color);
+  span {
+    margin-left: f.rem(4);
+  }
+}
+
+@import "./media.scss";

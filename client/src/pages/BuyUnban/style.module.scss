@@ -1,0 +1,21 @@
+@use "../../utils/helpScss/functions.scss" as f;
+
+.body {
+  width: 100%;
+  background-color: #fff;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+}
+
+.select {
+  margin-bottom: f.rem(25);
+}
+
+.info {
+  margin-bottom: f.rem(25);
+}
+
+@import "./media.scss";

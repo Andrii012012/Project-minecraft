@@ -1,0 +1,43 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+
+.item {
+  margin-bottom: f.rem(50);
+  background-color: #fff;
+  &:last-child {
+    margin-bottom: 0rem;
+  }
+}
+
+.news {
+  width: 100%;
+}
+
+.title {
+  padding: f.rem(18);
+  font-weight: 700;
+}
+
+.img {
+  margin-bottom: f.rem(15);
+  min-height: f.rem(250);
+  width: 100%;
+}
+
+.content {
+  padding: 0rem f.rem(18) f.rem(18) f.rem(18);
+}
+
+.description {
+  margin-bottom: f.rem(25);
+}
+
+.info {
+  display: flex;
+}
+
+.date {
+  flex: 1 1 auto;
+  padding-right: f.rem(6);
+}
+
+@import "./media.scss";

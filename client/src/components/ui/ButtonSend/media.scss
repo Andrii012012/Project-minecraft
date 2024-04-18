@@ -1,0 +1,14 @@
+@use "../../../utils/helpScss/functions.scss" as f;
+@use "../../../utils/helpScss/breakpoints.scss" as b;
+
+@media (max-width: map-get(b.$breakpoints, 'phoneLandscapeExtra')) {
+  .buttonSend {
+    width: 80%;
+  }
+}
+
+@media (max-width: map-get(b.$breakpoints, 'phone')) {
+  .buttonSend {
+    width: 100%;
+  }
+}

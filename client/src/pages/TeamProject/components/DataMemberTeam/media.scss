@@ -1,0 +1,14 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+@use "../../../../utils/helpScss/breakpoints.scss" as b;
+
+@media (max-width: map-get(b.$breakpoints, "phoneLandscapeExtra")) {
+  .item {
+    padding: f.rem(16);
+  }
+}
+
+@media (max-width: map-get(b.$breakpoints, "phone")) {
+  .item {
+    padding: f.rem(10);
+  }
+}

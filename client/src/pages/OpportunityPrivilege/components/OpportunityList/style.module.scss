@@ -1,0 +1,13 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+
+.command {
+  display: block;
+  margin-bottom: f.rem(10);
+  text-align: left;
+}
+
+.description {
+  text-align: left;
+}
+
+@import "./media.scss";

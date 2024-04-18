@@ -1,0 +1,25 @@
+@use "../utils/helpScss/functions.scss" as f;
+
+.error {
+  position: fixed;
+  top: 0;
+  right: f.rem(10);
+  visibility: hidden;
+  padding: f.rem(20);
+  font-size: f.rem(18);
+  z-index: 999;
+  background-color: rgba(249, 136, 102, 0.5);
+  transition: 0.8s linear;
+  display: flex;
+  align-items: center;
+  img {
+    width: 30px;
+    height: 30px;
+    margin-right: f.rem(15);
+  }
+}
+.errorActive {
+  visibility: visible !important;
+  top: f.rem(10);
+  transition: 0.8s linear;
+}

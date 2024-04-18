@@ -1,0 +1,40 @@
+@use "../../utils/helpScss/functions.scss" as f;
+
+.questions {
+  width: 100%;
+  background-color: #fff;
+}
+
+.body {
+  position: relative;
+  margin-bottom: f.rem(50);
+  img {
+    object-fit: cover;
+    width: 100%;
+    max-height: f.rem(500);
+  }
+}
+
+.title {
+  margin-bottom: f.rem(10);
+}
+
+.subtitle {
+  max-width: f.rem(350);
+}
+
+.bodyInfo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  padding: f.rem(10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(8, 148, 212, 0.3);
+  backdrop-filter: blur(6px);
+  text-align: center;
+}

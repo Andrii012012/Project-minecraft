@@ -1,0 +1,84 @@
+@use "../../../../styles/style.module.scss" as c;
+@use "../../../../utils/helpScss/functions.scss" as f;
+
+.btn {
+  background-color: map-get(c.$colors, "seafoam-green");
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0;
+  &::before {
+    content: "";
+    transition: 0.3s linear;
+  }
+  &:hover::before {
+    content: "";
+    transition: 0.3s linear;
+    transform: scale(1.1);
+  }
+}
+
+.registerAccount {
+  &::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 80px;
+    margin-left: f.rem(10);
+    background: url("../../../../assets/images/global/icon-filling-data.svg");
+    background-repeat: no-repeat;
+    background-size: 60px;
+    transform: rotate(-8deg);
+  }
+}
+
+.downloadLauncher {
+  display: flex;
+  align-items: center;
+  &::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 80px;
+    margin-left: f.rem(10);
+    background: url("../../../../assets/images/global/download-launcher.svg");
+    background-repeat: no-repeat;
+    background-size: 60px;
+    transform: rotate(-8deg);
+  }
+}
+
+.register {
+  position: relative;
+  justify-self: center;
+}
+
+.point {
+  width: 120px;
+  height: 120px;
+  min-width: 120px;
+  min-height: 120px;
+  font-size: f.rem(36);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin-bottom: f.rem(50);
+  &:last-child {
+    margin-bottom: 0r;
+  }
+}
+
+.point {
+  margin-right: 6.024%;
+}
+
+.text {
+  margin-bottom: f.rem(25);
+}
+
+@import "./media.scss";

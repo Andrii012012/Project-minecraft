@@ -1,0 +1,25 @@
+@use "../../../../styles/style.module.scss" as c;
+@use "../../../../utils/helpScss/functions.scss" as f;
+
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  transition: 0.3 linear;
+  background-color: map-get(c.$colors, "lime-green");
+  &:hover {
+    transition: 0.3 linear;
+    background-color: map-get(c.$colors, "lime-green-opacity");
+  }
+}
+
+.buyCoins {
+  width: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@import "./media.scss";

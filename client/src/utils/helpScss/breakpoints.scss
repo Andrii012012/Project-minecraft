@@ -1,0 +1,13 @@
+@use './functions.scss' as f;
+
+$currentSize: 16;
+
+$breakpoints: (
+  'desktop': f.em(1173, $currentSize),
+  'desktopLandscape': f.em(1050, $currentSize),
+  'tablet': f.em(960, $currentSize),
+  'tableLandscape': f.em(920, $currentSize),
+  'phoneLandscape': f.em(520, $currentSize),
+  'phoneLandscapeExtra': f.em(480, $currentSize),
+  'phone': f.em(380, $currentSize),
+);

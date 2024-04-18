@@ -1,0 +1,22 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+@use "../../../../styles/style.module.scss" as c;
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  width: 50%;
+  transition: 0.3 linear;
+  background-color: map-get(c.$colors, "lime-green");
+  &:hover {
+    transition: 0.3 linear;
+    background-color: map-get(c.$colors, "lime-green-opacity");
+  }
+}
+
+@import "./media.scss";

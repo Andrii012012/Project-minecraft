@@ -1,0 +1,19 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+
+.item {
+  text-align: center;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.serverName {
+  margin-bottom: f.rem(10);
+}
+
+.online {
+  font-weight: 600;
+  margin-bottom: f.rem(5);
+}
+
+@import "./media.scss";

@@ -1,0 +1,13 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+
+.item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: f.rem(25);
+  margin-bottom: f.rem(50);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@import "./media.scss";

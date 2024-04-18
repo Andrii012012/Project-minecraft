@@ -1,0 +1,30 @@
+@use "../../utils/helpScss/functions.scss" as f;
+
+.servers {
+  height: f.rem(500);
+  width: 100%;
+  margin-bottom: f.rem(50);
+  &.swiper {
+    height: 100%;
+    width: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .swiper-wrapper {
+    width: 100%;
+  }
+}
+
+// swiper-slide
+
+.swiper-pagination {
+  .swiper-pagination-bullet {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+  }
+}
+
+@import "./media.scss";

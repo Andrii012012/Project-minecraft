@@ -1,0 +1,48 @@
+@use "../../../../utils/helpScss/tamplates.scss" as *;
+@use "../../../../styles/style.module.scss" as c;
+@use "../../../../utils/helpScss/functions.scss" as f;
+
+.list {
+  margin-bottom: f.rem(50);
+}
+
+.agree {
+  margin-bottom: f.rem(25);
+  text-align: center;
+}
+
+.send {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.agree {
+  max-width: f.rem(575);
+  span {
+    color: map-get(c.$colors, "seafoam-green");
+  }
+}
+
+.pointNumber {
+  margin-right: f.rem(15);
+  width: f.rem(80);
+  height: f.rem(80);
+  font-size: f.rem(28);
+}
+
+.btn {
+  transition: 0.3 linear;
+  background-color: map-get(c.$colors, "lime-green");
+  &:hover {
+    transition: 0.3 linear;
+    background-color: map-get(c.$colors, "lime-green-opacity");
+  }
+}
+
+.field {
+  @extend %field;
+}
+
+@import "./media.scss";

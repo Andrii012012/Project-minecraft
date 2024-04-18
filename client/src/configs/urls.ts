@@ -1,0 +1,10 @@
+export const urlBd = "http://server/";
+export const urlSignBD = "http://server/?action=signin";
+export const urlResiterDB = "http://server/?action=register";
+export const urlGetTeamProject = "http://server/?action=get_team_project";
+export const urlUpdata = "http://server/?action=updata";
+export const urlGetUser = "http://server/?action=get_user";
+export const urlBuyPrivilege = "http://server/?action=buy_privilege";
+export const urlBuyGameMonay = "http://server/?action=buy_game_monay";
+export const urlBuyUnban = "http://server/?action=buy_unban";
+export const urlUpdataPassword = "http://server/?action=updata_password";

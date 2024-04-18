@@ -1,0 +1,12 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+@use "../../../../utils/helpScss/breakpoints.scss" as b;
+
+@media (max-width: map-get(b.$breakpoints, "phoneLandscapeExtra")) {
+  .list {
+    justify-items: center;
+    li {
+      max-width: f.rem(350);
+      width: 100%;
+    }
+  }
+}

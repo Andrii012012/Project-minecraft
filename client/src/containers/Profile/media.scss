@@ -1,0 +1,58 @@
+@use "../../utils/helpScss/functions.scss" as f;
+@use "../../utils/helpScss/breakpoints.scss" as b;
+
+@media (max-width: map-get(b.$breakpoints, "tableLandscape")) {
+  .avatar {
+    img {
+      width: f.rem(130);
+      height: f.rem(130);
+    }
+  }
+}
+
+@media (max-width: map-get(b.$breakpoints, "phoneLandscape")) {
+  .description {
+    margin-bottom: f.rem(15);
+  }
+  .imageMain {
+    max-height: f.rem(300);
+  }
+  .bodyUser {
+    padding: f.rem(200) f.rem(50) 0 f.rem(50);
+    align-items: center;
+  }
+  // .avatar {
+  //   img {
+  //     width: f.rem(110);
+  //     height: f.rem(110);
+  //   }
+  // }
+}
+
+@media (max-width: map-get(b.$breakpoints, "phoneLandscapeExtra")) {
+  .bodyUser {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: f.rem(25) f.rem(50) f.rem(15) f.rem(50);
+    margin: 0 0 0 f.rem(20) 0;
+  }
+  .avatar {
+    margin: f.rem(0) 0 f.rem(15) 0;
+  }
+  .description {
+    margin-bottom: f.rem(20);
+  }
+}
+
+@media (max-width: map-get(b.$breakpoints, "phone")) {
+  .online {
+    font-size: f.rem(16);
+  }
+  .avatar{
+     img{
+      width: 110px;
+      height: 110px;
+     }
+  }
+}

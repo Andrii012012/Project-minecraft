@@ -1,0 +1,42 @@
+@use "../../utils/helpScss/functions.scss" as f;
+
+.select {
+  display: inline-block;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+  background-color: #eee;
+  border: 1px solid #eee;
+  max-width: f.rem(350);
+  width: 100%;
+}
+
+.list {
+  transition: 0.3s linear;
+  overflow: hidden;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  padding: f.rem(10);
+  align-items: center;
+}
+
+.selectSelected {
+  order: 1;
+  flex: 1 1 auto;
+  margin-right: f.rem(15);
+}
+
+.close {
+  display: block;
+  order: 2;
+  top: 0;
+  right: 0;
+  transition: 0.3s linear;
+}
+
+.activeSelectList {
+  transition: 0.3s linear;
+}
+
+@import "./media.scss";

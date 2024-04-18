@@ -1,0 +1,24 @@
+@use "../../utils/helpScss/functions.scss" as f;
+@use "../../styles/style.module.scss" as c;
+
+.error {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  max-width: f.rem(400);
+  width: 100%;
+  max-height: f.rem(400);
+  margin-bottom: f.rem(25);
+}
+
+.title {
+  text-align: center;
+  color: map-get(c.$colors, "orange-red");
+}
+
+@import './media.scss';

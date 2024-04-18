@@ -1,0 +1,12 @@
+export const PASSWORD_ERROR = "Не верно введен пароль!";
+export const LOGIN_ERROR = "Не верно введен логин!";
+export const REPEAET_PASSWORD_ERROR = "Не верно введен повторный пароль!";
+export const LOGIN_LENGTH_ERROR_MAX = "Слишком большой ник!";
+export const LOGIN_LENGTH_ERROR_MIN = "Слишком короткий ник!";
+export const PASSWORD_LENGTH_ERROR_MIN = "Слишком короткий пароль!";
+export const EMAIL_ERROR = "Не верно введен email!";
+export const SUCCESS_SIGN = "Вы успешно ввошли в аккаунт!";
+export const SUCCESS_CHANGE_DATA = "Данные были успешно изменены!";
+export const SUCCESS_PAYMENT = "Оплата успешно произведена!";
+export const ERROR = "Ошибка...";
+export const ERROR_CONNECT_TO_SERVER = "Ошибка соединения с сервером...";

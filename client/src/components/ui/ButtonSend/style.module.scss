@@ -1,0 +1,17 @@
+@use "../../../utils/helpScss/functions.scss" as f;
+@use "../../../styles/style.module.scss" as c;
+
+.buttonSend {
+  padding: f.rem(20);
+  border-radius: f.rem(6);
+  text-transform: uppercase;
+  text-align: center;
+  line-height: f.em(20, 13);
+  transition: 0.3s linear;
+  width: 50%;
+  font-size: f.rem(16);
+  background-color: map-get(c.$colors, "lime-green");
+  color: #fff;
+}
+
+@import "./media.scss";

@@ -1,0 +1,11 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+
+.title {
+  margin-bottom: f.rem(50);
+}
+
+.titleSection {
+  margin-bottom: f.rem(25);
+}
+
+@import "./media.scss";

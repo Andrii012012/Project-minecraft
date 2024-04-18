@@ -1,0 +1,14 @@
+@use 'sass:math';
+//px in rem
+
+$size: 16;
+
+@function rem($px){
+ $result: #{$px / $size}rem;
+  @return $result;
+}
+
+@function em($px, $currentSize){
+  $result: #{$px / $currentSize}em;
+   @return $result;
+}

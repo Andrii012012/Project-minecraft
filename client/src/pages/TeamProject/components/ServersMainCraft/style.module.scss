@@ -1,0 +1,30 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+
+.listTeam {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: f.rem(25);
+  margin-bottom: f.rem(50);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.wrapperList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5625rem;
+}
+
+.item {
+  margin-bottom: f.rem(50);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.sarverName {
+  text-align: center;
+  margin-bottom: f.rem(25);
+  width: 100%;
+}

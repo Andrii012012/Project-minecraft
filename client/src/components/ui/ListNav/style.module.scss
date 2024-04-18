@@ -1,0 +1,28 @@
+@use "../../../utils/helpScss/functions.scss" as f;
+
+.item {
+  padding: f.rem(16) 0;
+  border-bottom: 3px solid #eee;
+  margin-bottom: f.rem(15);
+  cursor: pointer;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  a {
+    display: inline-block;
+    transition: 0.3s linear;
+  }
+  &:hover a {
+    transition: 0.3s linear;
+    transform: translate(10%, 0%);
+  }
+  button {
+    transition: 0.3s linear;
+  }
+  &:hover button {
+    transition: 0.3s linear;
+    transform: translate(10%, 0%);
+  }
+}
+
+@import "./media.scss";

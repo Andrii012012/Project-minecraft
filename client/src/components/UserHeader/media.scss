@@ -1,0 +1,32 @@
+@use "../../utils/helpScss/functions.scss" as f;
+@use "../../utils/helpScss/breakpoints.scss" as b;
+
+@media (max-width: 40em) {
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .avatar {
+    margin: 0 0 f.rem(25) 0;
+    img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  .header {
+    padding: f.rem(25) f.rem(25) 0 f.rem(25);
+    &::before {
+      height: 25rem;
+    }
+  }
+  .wrapper {
+    margin-bottom: f.rem(25);
+  }
+}
+
+@media (max-width: map-get(b.$breakpoints, "phoneLandscapeExtra")) {
+  .return {
+    font-size: f.rem(18);
+  }
+}

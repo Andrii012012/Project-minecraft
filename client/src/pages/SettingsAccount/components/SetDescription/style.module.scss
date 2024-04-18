@@ -1,0 +1,16 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+
+.title {
+  margin-bottom: f.rem(25);
+}
+
+.description {
+  border: 1px solid #000;
+  width: 60%;
+  padding: f.rem(15);
+  height: f.rem(80);
+  margin-bottom: f.rem(25);
+  resize: none;
+}
+
+@import "./media.scss";

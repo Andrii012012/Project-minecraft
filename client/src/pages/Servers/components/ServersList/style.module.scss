@@ -1,0 +1,114 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+@use "../../../../styles/style.module.scss" as c;
+
+%infoServer {
+  padding: f.rem(10);
+  font-weight: 700;
+  background-color: map-get(c.$colors, "seafoam-green");
+  border-radius: f.rem(6);
+}
+
+.wrapper {
+  width: 100%;
+  position: relative;
+  display: block;
+  color: #fff;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: f.rem(12);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.description {
+  display: grid;
+  grid-template-columns: 1fr;
+  color: #fff;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  padding: f.rem(20);
+}
+
+.item {
+  transition: 0.3s linear;
+  margin-bottom: f.rem(50);
+  &:hover {
+    transition: 0.3s linear;
+    transform: scale(1.05);
+  }
+}
+
+.title {
+  margin-bottom: f.rem(5);
+}
+
+.descriptionVersion {
+  font-weight: 700;
+  align-self: flex-start;
+  padding: f.rem(10);
+  background-color: map-get(c.$colors, "orange-red");
+  border-radius: f.rem(12);
+}
+
+.body {
+  margin-right: f.rem(25);
+  flex: 1 1 auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: f.rem(15);
+}
+
+.icon {
+  max-width: f.rem(100);
+  width: 100%;
+  height: f.rem(100);
+  margin-right: f.rem(25);
+}
+
+.bodyIcon{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.bodyInfo {
+  font-size: f.rem(18);
+  display: flex;
+  flex-wrap: wrap;
+  gap: f.rem(15);
+}
+
+.descriptionInfo {
+  padding: f.rem(15);
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: f.rem(16);
+  line-height: f.em(16, 12.8);
+}
+
+.header {
+  margin-bottom: f.rem(20);
+}
+
+
+.descriptionInfo {
+  margin-bottom: f.rem(10);
+}
+
+.numberServers {
+  @extend %infoServer;
+}
+
+.mods {
+  @extend %infoServer;
+}
+
+@import './media.scss';

@@ -1,0 +1,22 @@
+
+@use "../../../../utils/helpScss/tamplates.scss" as *;
+
+.formField {
+  input {
+    width: 100%;
+  }
+}
+
+.bodyInfo {
+  flex: 1 1 auto;
+  justify-content: flex-end;
+}
+
+.bodyBtn {
+  display: flex;
+  justify-content: center;
+}
+
+.field {
+  @extend %field;
+}

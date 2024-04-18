@@ -1,0 +1,55 @@
+@use "../../utils/helpScss/functions.scss" as f;
+
+.select {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+  justify-items: center;
+  width: 100%;
+  gap: f.rem(20);
+}
+
+.money {
+  font-size: f.rem(18);
+  font-weight: 700;
+  margin-bottom: f.rem(5);
+  span {
+    margin-left: f.rem(5);
+  }
+}
+
+.item {
+  padding: f.rem(10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: f.rem(160);
+  width: 100%;
+  cursor: pointer;
+  transition: 0.3s linear;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    transition: 0.3s linear;
+  }
+}
+
+.bonus {
+  line-height: f.em(18, 12);
+  span {
+    margin-left: f.rem(5);
+    color: var(--main-color);
+    font-weight: 700;
+  }
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  text-align: center;
+}

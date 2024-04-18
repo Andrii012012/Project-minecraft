@@ -1,0 +1,81 @@
+@use "../../utils/helpScss/functions.scss" as f;
+
+.profile {
+  width: 100%;
+  background-color: #fff;
+}
+
+.header {
+  position: relative;
+}
+
+.avatar {
+  margin-right: f.rem(25);
+  position: relative;
+  img {
+    width: f.rem(150);
+    height: f.rem(150);
+    border-radius: f.rem(6);
+  }
+}
+
+.bodyUser {
+  display: flex;
+  align-items: flex-end;
+  padding: f.rem(250) f.rem(50) 0 f.rem(50);
+  position: relative;
+  z-index: 2;
+  margin-bottom: f.rem(25);
+}
+
+.bodyUserInfo {
+  transform: translateY(-100%);
+  display: flex;
+  align-items: center;
+}
+
+.imageMain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: f.rem(350);
+  height: 100%;
+}
+
+.userName {
+  font-size: f.rem(21);
+  font-weight: 600;
+  margin: 0 f.rem(10) 0 0;
+}
+
+.content {
+  padding: 0 f.rem(50) f.rem(50) f.rem(50);
+}
+
+.text {
+  flex: 1 1 auto;
+}
+
+.userData {
+  text-align: center;
+  margin-bottom: f.rem(50);
+}
+
+.description {
+  text-align: center;
+  margin-bottom: f.rem(25);
+}
+
+.servers {
+  display: flex;
+  padding: 0 f.rem(20);
+  flex-wrap: wrap;
+  gap: f.rem(25);
+}
+
+.online {
+  margin-bottom: f.rem(25);
+}
+
+@import "./media.scss";

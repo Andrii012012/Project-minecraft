@@ -1,0 +1,21 @@
+@use "../../../../styles/style.module.scss" as c;
+@use "../../../../utils/helpScss/functions.scss" as f;
+
+.item {
+  padding: f.rem(10);
+  cursor: pointer;
+  margin-bottom: f.rem(6);
+  &:hover {
+    color: #fff;
+    background-color: map-get(c.$colors, "seafoam-green");
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.selectItemHidden {
+  display: none;
+}
+
+@import "./media.scss";

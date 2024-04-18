@@ -1,0 +1,29 @@
+@use "../../../../utils/helpScss/breakpoints.scss" as b;
+@use "../../../../utils/helpScss/functions.scss" as f;
+
+@media (max-width: map-get(b.$breakpoints, "tableLandscape")) {
+  .item {
+    font-size: f.rem(28);
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .itemIcon {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: map-get(b.$breakpoints, "phoneLandscape")) {
+  .item {
+    font-size: f.rem(20);
+  }
+}
+
+
+@media (max-width: map-get(b.$breakpoints, "phone")) {
+  .item {
+    padding: f.rem(16);
+    font-size: f.rem(18);
+  }
+}

@@ -1,0 +1,22 @@
+@use "../.././../styles/style.module.scss" as c;
+@use "../../../utils/helpScss/functions.scss" as f;
+
+.point {
+  border-radius: 50%;
+  background-color: map-get(c.$colors, "lime-green");
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 700;
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: f.rem(60);
+    height: f.rem(60);
+  }
+}
+
+@import "./media.scss";

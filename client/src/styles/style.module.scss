@@ -1,0 +1,95 @@
+@use "../utils/helpScss/functions.scss" as f;
+@import "./Null.scss";
+
+$colors: (
+  "orange-red": #ff420e,
+  "coral": coral,
+  "seafoam-green": #80bd9e,
+  "lime-green": #89da59,
+  "orange-red-opacity": rgba(255, 66, 14, 0.7),
+  "coral-opacity": rgba(255, 127, 80, 0.7),
+  "seafoam-green-opacity": rgba(128, 189, 158, 0.7),
+  "lime-green-opacity": rgba(137, 218, 89, 0.7),
+);
+
+.page {
+  grid-area: page;
+  max-width: f.rem(800);
+  width: 100%;
+}
+
+.containerContent {
+  padding: 0 f.rem(50) f.rem(50) f.rem(50);
+}
+
+.container {
+  max-width: f.rem(1240);
+  width: 100%;
+  min-height: 100%;
+  padding: 0 f.rem(20);
+  margin: 0 auto;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.titleBig {
+  font-size: f.rem(36);
+  line-height: f.em(36, 32);
+  letter-spacing: 0.6px;
+  font-weight: 700;
+}
+
+.titleMedium {
+  font-size: f.rem(32);
+  line-height: f.em(32, 24);
+  letter-spacing: 0.6px;
+  font-weight: 700;
+}
+
+.titleSmall {
+  font-size: f.rem(24);
+  line-height: f.em(24, 20);
+  letter-spacing: 0.4px;
+  font-weight: 700;
+}
+
+.subtitleMedium {
+  font-size: f.rem(18);
+  line-height: f.em(18, 14.5);
+}
+
+.subtitleBig {
+  font-size: f.rem(20);
+  line-height: f.em(20, 16);
+}
+
+.sectionName {
+  font-size: f.rem(28);
+  line-height: f.em(28, 18.5);
+  font-weight: 700;
+}
+
+.descriptionMedium {
+  font-size: f.rem(18);
+  line-height: f.em(18, 14.5);
+}
+
+.descriptionBig {
+  @extend .subtitleBig !optional;
+}
+
+.textBig {
+  @extend .subtitleBig !optional;
+}
+
+.textSmall {
+  font-size: f.rem(16);
+  line-height: f.em(16, 12.8);
+}
+
+.textMedium {
+  font-size: f.rem(18);
+  line-height: f.em(18, 14.4);
+}
+
+@import "./media.scss";

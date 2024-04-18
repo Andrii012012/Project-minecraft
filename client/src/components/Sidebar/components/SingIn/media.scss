@@ -1,0 +1,12 @@
+@use "../../../../utils/helpScss/breakpoints.scss" as b;
+
+/* 520 */
+
+@media (max-width: map-get(b.$breakpoints, "phoneLandscape")) {
+  .sidebar-social {
+    max-width: 100%;
+  }
+  .form-sign__btn-sign {
+    width: 95% !important;
+  }
+}

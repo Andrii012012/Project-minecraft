@@ -1,0 +1,22 @@
+@use "../../utils/helpScss/functions.scss" as f;
+@use "../../utils/helpScss/breakpoints.scss" as b;
+
+@media (max-width: map-get(b.$breakpoints, "phoneLandscape")) {
+  .system {
+    max-width: f.rem(200);
+    width: 100%;
+    height: f.rem(200);
+  }
+}
+
+@media (max-width: map-get(b.$breakpoints, 'phoneLandscapeExtra')) {
+  .choose {
+    margin-bottom: f.rem(25);
+  }
+  .bodySystemChoose {
+    flex-direction: column;
+  }
+  .title {
+    padding-top: f.rem(25);
+  }
+}

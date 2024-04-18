@@ -1,0 +1,51 @@
+@use "../../../../styles/style.module.scss" as c;
+@use "../../../../utils/helpScss/functions.scss" as f;
+
+.privilegeBuy {
+  margin-bottom: f.rem(50);
+}
+
+.title {
+  margin-bottom: f.rem(25);
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
+  gap: f.rem(25);
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: f.rem(40);
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s linear;
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.3s linear;
+  }
+}
+
+.price {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: rotate(20deg);
+  background-color: map-get(c.$colors, "orange-red");
+  padding: f.rem(8) f.rem(12);
+  border-radius: f.rem(8);
+  font-weight: 700;
+  font-size: f.rem(14);
+  span {
+    margin-left: f.rem(3);
+  }
+}
+
+.privilege {
+  font-weight: 700;
+}

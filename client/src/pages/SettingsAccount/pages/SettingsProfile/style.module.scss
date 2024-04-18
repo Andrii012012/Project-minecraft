@@ -1,0 +1,17 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+
+.settings {
+  color: #000;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.bodyBtn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@import './media.scss';

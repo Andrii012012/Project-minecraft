@@ -1,0 +1,13 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+@use "../../../../utils/helpScss/breakpoints.scss" as b;
+
+@media (max-width: map-get(b.$breakpoints, "phone")) {
+  .icon {
+    max-width: f.rem(80);
+    max-height: f.rem(80);
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}

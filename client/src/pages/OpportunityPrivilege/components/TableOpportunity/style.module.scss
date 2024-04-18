@@ -1,0 +1,23 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+.body {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: f.rem(25);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.image {
+  max-width: f.rem(250);
+  max-height: f.rem(250);
+  min-height: f.rem(100);
+  min-width: f.rem(100);
+  flex-basis: 30%;
+}
+
+.itemPrivilage {
+  font-size: f.rem(20);
+}
+
+@import "./media.scss";

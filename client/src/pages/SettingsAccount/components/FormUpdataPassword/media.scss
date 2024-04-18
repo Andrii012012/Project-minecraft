@@ -1,0 +1,12 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+@use "../../../../utils/helpScss/breakpoints.scss" as b;
+
+@media (max-width: map-get(b.$breakpoints, "phoneLandscapeExtra")) {
+  .changePass {
+    margin-bottom: f.rem(50);
+  }
+  .pointField {
+    width: 80px;
+    height: 80px;
+  }
+}

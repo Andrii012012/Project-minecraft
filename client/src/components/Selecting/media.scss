@@ -1,0 +1,8 @@
+@use "../../utils/helpScss/breakpoints.scss" as b;
+@use "../../utils/helpScss/functions.scss" as f;
+
+@media (max-width: map-get(b.$breakpoints, "phoneLandscapeExtra")) {
+  .selecting__title {
+    margin-bottom: f.rem(15);
+  }
+}

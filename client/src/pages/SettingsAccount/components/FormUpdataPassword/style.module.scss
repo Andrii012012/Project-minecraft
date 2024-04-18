@@ -1,0 +1,36 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+
+.list {
+  margin-bottom: f.rem(50);
+}
+
+.changePass {
+  margin-bottom: f.rem(100);
+}
+
+.bodyBtn {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.title {
+  margin-bottom: f.rem(25);
+}
+
+.pointField{
+  width: 90px;
+  height: 90px;
+  font-size: f.rem(28);
+  margin-right: f.rem(15);
+}
+
+@import "./media.scss";

@@ -1,0 +1,14 @@
+@use "../../utils/helpScss/functions.scss" as f;
+@use "../../utils/helpScss/breakpoints.scss" as b;
+
+@media (max-width: map-get(b.$breakpoints, "phoneLandscape")) {
+  .privilege-form__btn {
+    width: 80%;
+  }
+}
+
+@media (max-width: map-get(b.$breakpoints, "phone")) {
+  .privilege__privilege {
+    font-size: f.rem(28);
+  }
+}

@@ -1,0 +1,7 @@
+@use "../../../../utils/helpScss/breakpoints.scss" as b;
+
+@media (max-width: map-get(b.$breakpoints, "phoneLandscape")) {
+  .btn {
+    width: 100%;
+  }
+}

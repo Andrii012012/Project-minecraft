@@ -1,0 +1,9 @@
+@use './functions.scss' as f;
+
+%field {
+  padding: f.rem(20);
+  background-color: #eee;
+  border-radius: f.rem(6);
+  font-size: f.rem(18);
+  width: 100%;
+}

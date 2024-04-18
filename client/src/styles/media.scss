@@ -1,0 +1,90 @@
+@use "../utils/helpScss/functions.scss" as f;
+@use "../utils/helpScss/breakpoints.scss" as b;
+
+@media (max-width: map-get(b.$breakpoints, "desktopLandscape")) {
+  .page {
+    margin-bottom: f.rem(50);
+    max-width: initial;
+  }
+}
+
+@media (max-width: map-get(b.$breakpoints, "tableLandscape")) {
+  .page {
+    padding-top: f.rem(200);
+  }
+}
+
+@media (max-width: map-get(b.$breakpoints, "phoneLandscape")) {
+  .sectionName {
+    font-size: f.rem(24);
+  }
+  .titleBig {
+    font-size: f.rem(28);
+  }
+  .titleMedium {
+    font-size: f.rem(24);
+  }
+  .titleSmall {
+    font-size: f.rem(20);
+  }
+  .subtitleBig {
+    font-size: f.rem(18);
+  }
+  .subtitleMedium {
+    font-size: f.rem(16);
+  }
+  .containerContent {
+    padding: 0 f.rem(15) f.rem(50) f.rem(15) !important;
+  }
+  .subtitleMedium {
+    font-size: f.rem(16);
+  }
+  .textMedium {
+    font-size: f.rem(16);
+  }
+  .descriptionMedium {
+    font-size: f.rem(16);
+  }
+}
+
+@media (max-width: map-get(b.$breakpoints, "phoneLandscapeExtra")) {
+  .textSmall {
+    font-size: f.rem(14);
+  }
+  .textMedium {
+    font-size: f.rem(16);
+  }
+  .textBig {
+    font-size: f.rem(18);
+  }
+}
+
+@media (max-width: map-get(b.$breakpoints, "phone")) {
+  .container {
+    padding: 0 f.rem(10);
+  }
+  .titleMedium {
+    font-size: f.rem(20);
+  }
+  .titleBig {
+    font-size: f.rem(24);
+  }
+  .titleSmall {
+    font-size: f.rem(18);
+  }
+  .subtitleMedium {
+    font-size: f.rem(14);
+  }
+  .sectionName {
+    font-size: f.rem(20);
+  }
+  .subtitleBig {
+    font-size: f.rem(16);
+  }
+  .textBig {
+    font-size: f.rem(16);
+  }
+  .textMedium {
+    font-size: f.rem(14);
+  }
+}

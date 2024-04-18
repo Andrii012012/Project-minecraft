@@ -1,0 +1,19 @@
+@use "../../../../utils/helpScss/breakpoints.scss" as b;
+@use "../../../../utils/helpScss/functions.scss" as f;
+
+
+@media (max-width: map-get(b.$breakpoints, "phoneLandscapeExtra")) {
+  .item {
+    flex-direction: column;
+    align-items: center;
+  }
+  .icon {
+    margin-right: 0;
+    max-width: f.rem(120);
+    max-height: f.rem(120);
+    margin-bottom: f.rem(25);
+  }
+  .aboutMods {
+    padding: f.rem(15);
+  }
+}

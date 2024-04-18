@@ -1,0 +1,105 @@
+@use "../../utils/helpScss/functions.scss" as f;
+@use "../../styles/style.module.scss" as c;
+@use "sass:map";
+
+.sidebar {
+  max-width: f.rem(360);
+  width: 100%;
+  background-color: #0000;
+  grid-area: sidebar;
+  justify-self: flex-end;
+  padding-left: f.rem(20);
+  margin-left: f.rem(20);
+
+  .infoSection {
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: f.rem(25);
+  }
+
+  .nameSection {
+    background: map-get(c.$colors, "orange-red");
+    min-height: f.rem(60);
+    width: 100%;
+    display: flex;
+    padding: 0 f.rem(20);
+    align-items: center;
+    color: #fff;
+  }
+
+  .signBtn {
+    padding: f.rem(11);
+    width: 100%;
+    display: block;
+    background-color: #000;
+    color: #fff;
+    font-size: f.rem(18);
+    text-align: center;
+    line-height: f.rem(25);
+    font-weight: 500;
+    transition: 0.3s linear;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hover {
+      transition: 0.3s linear;
+    }
+  }
+
+  .text {
+    display: flex;
+    align-items: center;
+  }
+
+  .formBtn {
+    width: 95%;
+    margin-bottom: f.rem(20);
+  }
+
+  .nameSection {
+    margin-bottom: f.rem(20);
+  }
+  .userBtn {
+    color: #fff;
+    background-color: var(--coral);
+  }
+
+  .item button {
+    font-size: f.rem(20);
+  }
+
+  .list {
+    padding: 0 f.rem(16);
+    a {
+      color: #000;
+    }
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+    margin-right: f.rem(15);
+  }
+}
+
+.sectionSidebarBody {
+  background-color: #fff;
+  margin-bottom: f.rem(25);
+}
+
+.sectionSidebar {
+  background-color: map-get(c.$colors, "orange-red");
+  color: #fff;
+  display: flex;
+  align-items: center;
+  height: f.rem(60);
+  padding: 0 f.rem(15);
+  font-size: f.rem(20);
+  font-weight: 700;
+}
+
+.sectionSign {
+  margin-bottom: f.rem(15);
+}
+
+@import "./media.scss";

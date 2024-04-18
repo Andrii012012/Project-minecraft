@@ -1,0 +1,16 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: f.rem(500);
+}
+
+.style_page__Gt3Wa .swiper-pagination .swiper-pagination-bullet {
+  width: 30px;
+  height: 30px;
+}
+
+
+
+@import "./media.scss";

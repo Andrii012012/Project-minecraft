@@ -1,0 +1,14 @@
+@use "../../../../utils/helpScss/functions.scss" as f;
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.item {
+  border: 1px solid #000;
+  padding: f.rem(10);
+  background-color: #eee;
+}
+
+@import "./media.scss";

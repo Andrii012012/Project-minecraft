@@ -1,0 +1,42 @@
+@use "../../utils/helpScss/functions.scss" as f;
+
+.settings {
+  width: 100%;
+  min-height: auto;
+  background-color: #fff;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  max-height: f.rem(10);
+}
+
+.content {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  margin-bottom: f.rem(25);
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 1px 1px 2px black;
+}
+
+.image {
+  position: relative;
+  z-index: 25;
+}
+
+.point {
+  color: #000;
+  img {
+    max-width: f.rem(150);
+    width: 100%;
+    max-height: f.rem(150);
+  }
+}
+
+@import "./media.scss";
