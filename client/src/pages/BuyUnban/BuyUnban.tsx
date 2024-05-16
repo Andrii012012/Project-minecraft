@@ -1,23 +1,20 @@
-import React from "react";
 import styles from "./style.module.scss";
 import gStyles from "../../styles/style.module.scss";
 import UserHeader from "../../components/UserHeader/UserHeader";
-import { useContext, useState } from "react";
-import { UserData } from "../../contexts/user";
+import {useState } from "react";
 import { CABINET_ROUTE } from "../../routers/routes";
 import Selecting from "../../components/Selecting/Selecting";
 import { urlBuyUnban } from "../../configs/urls";
 import AccessClosed from "../../components/AccessClosed/AccessClosed";
-import { useNavigate } from "react-router-dom";
 import SendData from "./components/SendData/SendData";
 import { IDataSend } from "./interface/interface";
 import { TSetDataSend } from "./interface/type";
-import { IData, IDataControl, IServer } from "../../interface/interface";
+import { IServer } from "../../interface/interface";
 import Error from "../Error/Error";
+import { useAppSelector } from "../../hooks/useAppSelector";
 
 export default function BuyUnban(): JSX.Element {
-  const data = useContext<IDataControl | null>(UserData);
-  const goHome = useNavigate();
+  const data = useAppSelector(state => state.user);
 
   const [dataSend, setDataSend] = useState<IDataSend>({
     server: "",
@@ -25,10 +22,8 @@ export default function BuyUnban(): JSX.Element {
     price: 300,
   });
 
-  if (data && data.data.user) {
-    const onFuncSend = data.setDataUser;
-    const dataUser: IData = data.data.user;
-    let { id, avatar, servers } = dataUser;
+  if (data && data.user) {
+    let { id, avatar, servers } = data.user;
 
     let isBan: IServer[] = [];
 
@@ -71,9 +66,7 @@ export default function BuyUnban(): JSX.Element {
                 <SendData
                   url={urlBuyUnban}
                   id={id}
-                  goHome={goHome}
                   data={dataSend}
-                  onFuncSend={onFuncSend}
                 />
               )}
             </div>
@@ -91,6 +84,6 @@ export default function BuyUnban(): JSX.Element {
       );
     }
   } else {
-    return <Error/>;
+    return <Error />;
   }
 }

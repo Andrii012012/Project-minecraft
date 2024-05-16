@@ -1,8 +1,5 @@
-import React from "react";
 import styles from './styles.module.scss';
 import gStyles from '../../styles/style.module.scss';
-import { useContext } from "react";
-import { UserData } from "../../contexts/user";
 import imageBuyMonay from "../../assets/images/page/Cabinet/cabinet-image-buy-monay.svg";
 import imageBuyPrivilege from "../../assets/images/page/Cabinet/cabinet-image-buy-privilege.svg";
 import imageBuyGameMonay from "../../assets/images/page/Cabinet/cabinet-image-buy-game-monay.svg";
@@ -15,10 +12,9 @@ import {
   CABINET_BUY_UNBAN_ROUTE,
 } from "../../routers/routes";
 import ListOpportunity from "./components/ListOpportunity/ListOpportunity";
-import { IData, IDataControl } from "../../interface/interface";
+import { IData } from "../../interface/interface";
 import Error from "../Error/Error";
-
-
+import { useAppSelector } from "../../hooks/useAppSelector";
 
 type TItem = Record<"img" | "text" | "path", string>;
 type TDataUser = Record<"avatar" | "login", string>;
@@ -39,10 +35,10 @@ const itemsOpportunity: Array<TItem> = [
 ];
 
 export default function Cabinet(): JSX.Element {
-  const data = useContext<IDataControl | null>(UserData);
+  const data = useAppSelector(state => state.user);
 
-  if (data && data.data.user) {
-    const dataUser: IData | null = data.data.user;
+  if (data && data.user) {
+    const dataUser: IData = data.user;
     if (dataUser) {
       let { avatar, login }: TDataUser = dataUser;
       return (

@@ -6,7 +6,7 @@ import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
 import PageLayout from "./pageLayout/PageLayout";
 import { Route, Routes } from "react-router-dom";
-import { useLayoutEffect, lazy, Suspense } from "react";
+import { useLayoutEffect, lazy, Suspense, useState } from "react";
 import {
   HOME_ROUTE,
   RULES_ROUTE,
@@ -27,6 +27,8 @@ import {
   INFO_SERVER_TECHNOMAGIC_ROUTE,
   OPPORTUNITY_PRIVILEGE_ROUTE,
 } from "./routers/routes";
+import { IData } from "./interface/interface";
+import { useAppSelector } from "./hooks/useAppSelector";
 const Loading = lazy(() => import("./pages/Loading/Loading"));
 const Home = lazy(() => import("./pages/Home/Home"));
 const Rules = lazy(() => import("./pages/Rules/Rules"));
@@ -58,9 +60,11 @@ const OpportunityPrivilege = lazy(
 const Error = lazy(() => import("./pages/Error/Error"));
 
 function App(): JSX.Element {
+
   useLayoutEffect((): void => {
     document.documentElement.scrollTo(0, 0);
   }, []);
+
   return (
     <PageLayout>
       <Suspense fallback={<Loading />}>

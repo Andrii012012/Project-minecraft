@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./style.module.scss";
 import gStyles from "../../styles/style.module.scss";
 import imageMain from "../../assets/images/page/Profile/profile-image-main.png";

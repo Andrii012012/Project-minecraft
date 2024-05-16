@@ -3,7 +3,6 @@ import styles from "./style.module.scss";
 import gStyles from "../../styles/style.module.scss";
 import UserHeader from "../../components/UserHeader/UserHeader";
 import { useContext, useState } from "react";
-import { UserData } from "../../contexts/user";
 import { CABINET_ROUTE } from "../../routers/routes";
 import Selecting from "../../components/Selecting/Selecting";
 import { dataServers } from "../../contexts/dataServers";
@@ -20,12 +19,14 @@ import {
 import { urlBuyPrivilege } from "../../configs/urls";
 import { IStatBuyPrivilege } from "./interface/interface";
 import { TSetStatePrivilege } from "./interface/type";
-import { IDataControl, IServer } from "../../interface/interface";
+import { IServer } from "../../interface/interface";
 import Error from "../Error/Error";
+import { useAppSelector } from "../../hooks/useAppSelector";
 
 export default function Privilege(): JSX.Element {
   const servers = useContext<IServer[] | null>(dataServers);
-  const data = useContext<IDataControl | null>(UserData);
+
+  const data = useAppSelector(state => state.user);
 
   const [buyPrivilege, setBuyPrivilege] = useState<IStatBuyPrivilege>({
     server: "",
@@ -88,10 +89,9 @@ export default function Privilege(): JSX.Element {
     });
   }
 
-  if (data && data.data.user && servers) {
+  if (data && data.user && servers) {
     const listServers = servers;
-    const onFuncSend = data.setDataUser;
-    const dataUser = data.data.user;
+    const dataUser = data.user;
 
     return (
       <main className={gStyles.page}>
@@ -120,7 +120,6 @@ export default function Privilege(): JSX.Element {
             />
             {buyPrivilege.server && buyPrivilege.privilege ? (
               <SendData
-                onFuncSend={onFuncSend}
                 data={buyPrivilege}
                 url={urlBuyPrivilege}
                 dataUser={dataUser}

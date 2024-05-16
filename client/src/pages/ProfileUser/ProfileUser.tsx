@@ -1,15 +1,12 @@
-import React from "react";
-import { useContext } from "react";
-import { UserData } from "../../contexts/user";
 import Profile from "../../containers/Profile/Profile";
-import { IDataControl } from "../../interface/interface";
+import { useAppSelector } from "../../hooks/useAppSelector";
 
 export default function ProfileUser(): JSX.Element {
-  const data = useContext<IDataControl | null>(UserData);
-  const userData = data?.data;
+  const data = useAppSelector(state => state.user);
+  const userData = data.user;
 
-  if (userData?.user) {
-    return <Profile userData={userData.user} />;
+  if (userData) {
+    return <Profile userData={userData} />;
   } else {
     return <></>;
   }

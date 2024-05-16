@@ -1,9 +1,6 @@
-import React from "react";
 import styles from "./style.module.scss";
 import gStyles from "../../styles/style.module.scss";
-import { useContext } from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
-import { UserData } from "../../contexts/user";
+import { Route, Routes } from "react-router-dom";
 import Security from "./pages/Security/Security";
 import SettingsProfile from "./pages/SettingsProfile/SettingsProfile";
 import lock from "../../assets/images/page/SettingsAccount/setting-account-icon-lock.svg";
@@ -11,24 +8,19 @@ import safety from "../../assets/images/page/SettingsAccount/setting-account-ico
 import Sections from "./components/Sections/Sections";
 import HeaderUser from "./components/HeaderUser/HeaderUser";
 import { SECURITY, SETTINGS_PROFILE } from "./routes/routes";
-import { IDataControl } from "../../interface/interface";
 import { TMains } from "./interface/type";
+import { useAppSelector } from "../../hooks/useAppSelector";
 
 export default function SettingsAccount(): JSX.Element {
-  const contextDataUser = useContext<IDataControl | null>(UserData);
-  const loading = contextDataUser?.data?.loading;
-
-  const goHome = useNavigate();
+  const data = useAppSelector(state => state.user);
 
   const mains: TMains[] = [
     { text: "Настройки аккаунта", image: safety, path: SETTINGS_PROFILE },
     { text: "Безопасность", image: lock, path: SECURITY },
   ];
 
-  if (loading && contextDataUser && contextDataUser.data) {
-    const data = contextDataUser.data;
+  if (data.user) {
     const dataUser = data.user!;
-    const onFuncSend = contextDataUser.setDataUser;
 
     let { login: name = "name", avatar } = dataUser;
     return (
@@ -43,8 +35,6 @@ export default function SettingsAccount(): JSX.Element {
                 element={
                   <SettingsProfile
                     user={dataUser}
-                    onFuncSend={onFuncSend}
-                    goHome={goHome}
                   />
                 }
               />
@@ -52,9 +42,7 @@ export default function SettingsAccount(): JSX.Element {
                 path={SECURITY}
                 element={
                   <Security
-                    onFuncSend={onFuncSend}
                     user={dataUser}
-                    goHome={goHome}
                   />
                 }
               />

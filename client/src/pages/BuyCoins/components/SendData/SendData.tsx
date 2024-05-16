@@ -3,20 +3,25 @@ import styles from "./style.module.scss";
 import gStyles from "../../../../styles/style.module.scss";
 import ButtonSend from "../../../../components/ui/ButtonSend/ButtonSend";
 import { IData } from "../../../../interface/interface";
-import { TFuncSend } from "../../../../interface/type";
 import { IExchange } from "../../interface/interface";
-import { NavigateFunction } from "react-router-dom";
+import { useAppDispatch } from "../../../../hooks/useAppDispatch";
+import { callDateUser } from "../../../../features/user/user.";
+import update from "../../../../features/utils/update";
+import { useAppSelector } from "../../../../hooks/useAppSelector";
 
 interface IProps {
   url: string;
   data: IData | null;
-  onFuncSend: TFuncSend;
-  goHome: NavigateFunction;
   value: IExchange;
 }
 
 export default function SendData(props: IProps): JSX.Element {
-  let { url, data, onFuncSend, goHome, value } = props;
+  let { url, data, value } = props;
+
+  const dispatch = useAppDispatch();
+  const dataUser = useAppSelector(state => state.user);
+  const statusUpdate = dataUser.status;
+  const dataSignIn = dataUser.dataSingIn;
 
   if (data) {
     const { id, coins } = data;
@@ -29,11 +34,8 @@ export default function SendData(props: IProps): JSX.Element {
       form.append("minusMonay", value.fieldMonay as keyof React.ReactNode);
       form.append("server", value.server as keyof React.ReactNode);
       form.append("serverId", value.serverId as keyof React.ReactNode);
-      let result = await onFuncSend(url, form);
-      if (result) {
-        goHome("/");
-        window.location.reload();
-      }
+      await dispatch(callDateUser({method: 'post', url, form}));
+      update(statusUpdate, {login: dataSignIn?.login || '', password: dataSignIn?.password || ''}, dispatch);
     }
 
     return (

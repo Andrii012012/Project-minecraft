@@ -13,9 +13,10 @@ interface IProps {
 const Accordion = (props: IProps): any => {
   let { title, description } = props;
 
+
   function resetStyle(): void {
     document
-      .querySelectorAll<HTMLDivElement>(`.${styles.accordionWrapper}`)
+      .querySelectorAll<HTMLDivElement>(`.${styles.accordionBody}`)
       .forEach((item, _) => (item.style.maxHeight = `${0}px`));
   }
 
@@ -34,12 +35,16 @@ const Accordion = (props: IProps): any => {
 
   setTimeout(() => {
     const accordioneBody = document.querySelectorAll<HTMLDivElement>(
-      `.${styles.accordionWrapper}`
+      `.${styles.accordionBody}`
     );
 
     if (accordioneBody.length > 0) {
       initialAccordion();
     }
+
+    console.log(document.querySelectorAll<HTMLDivElement>(
+      `.${styles.accordionBody1}`
+    ));
 
 
     function initialAccordion() {
@@ -61,7 +66,7 @@ const Accordion = (props: IProps): any => {
         });
       });
     }
-  }, 100);
+  }, 800);
 
   const saveAccordion: React.ReactElement[] = [];
 
@@ -79,7 +84,7 @@ const Accordion = (props: IProps): any => {
               </div>
             </div>
           </div>
-          <div className={styles.accordionWrapper}>
+          <div className={styles.accordionBody}>
             <p className={styles.text}>{description[i]}</p>
           </div>
         </li>
@@ -96,7 +101,7 @@ const Accordion = (props: IProps): any => {
             </div>
           </div>
         </div>
-        <div className={styles.accordionWrapper}>
+        <div className={styles.accordionBody}>
           <p className={styles.text}>{description}</p>
         </div>
       </li>

@@ -3,20 +3,25 @@ import styles from "./style.module.scss";
 import gStyles from "../../../../styles/style.module.scss";
 import ButtonSend from "../../../../components/ui/ButtonSend/ButtonSend";
 import { IDataSend } from "../../interface/interface";
-import { TFuncSend } from "../../../../interface/type";
-import { NavigateFunction } from "react-router-dom";
+import { useAppDispatch } from "../../../../hooks/useAppDispatch";
+import { callDateUser } from "../../../../features/user/user.";
+import { useAppSelector } from "../../../../hooks/useAppSelector";
+import update from "../../../../features/utils/update";
 
 interface IProps {
   url: string;
   id: string;
-  goHome: NavigateFunction;
   data: IDataSend;
-  onFuncSend: TFuncSend;
 }
 
 export default function SendData(props: IProps): JSX.Element {
-  let { url, id, goHome, data, onFuncSend } = props;
+  let { url, id, data } = props;
 
+  const dispatch = useAppDispatch();
+  const dataUser = useAppSelector(state => state.user);
+  const statusUpdate = dataUser.status;
+  const dataSignIn = dataUser.dataSingIn;
+  
   async function onSendData(e: React.FormEvent) {
     e.preventDefault();
     const form = new FormData();
@@ -24,11 +29,8 @@ export default function SendData(props: IProps): JSX.Element {
     form.append("server", data?.server!);
     form.append("serverId", data?.serverId!);
     form.append("costUnban", data?.price as keyof React.ReactNode);
-    let result = await onFuncSend(url, form);
-    if (result) {
-      goHome("/");
-      window.location.reload();
-    }
+    await dispatch(callDateUser({ method: 'post', url, form }));
+    update(statusUpdate, {login: dataSignIn?.login || '', password: dataSignIn?.password || ''}, dispatch);
   }
 
   return (

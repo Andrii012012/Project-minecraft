@@ -1,19 +1,17 @@
-import React from "react";
 import styles from "./style.module.scss";
 import gStyles from "../../styles/style.module.scss";
 import UserHeader from "../../components/UserHeader/UserHeader";
-import { useContext, useState, useCallback } from "react";
-import { UserData } from "../../contexts/user";
 import paySystemCard from "../../assets/images/page/Pay/pay-mastercard.png";
 import SelectOffer from "../../components/SelectOffer/SelectOffer";
 import { CABINET_ROUTE } from "../../routers/routes";
 import CardList from "./components/CardList/CardList";
 import CalcMonay from "./components/CalcMonay/CalcMonay";
 import {PROMOTIONS} from "../../constants/promotions";
-import { IData, IDataControl } from "../../interface/interface";
-import { TData } from "../../interface/type";
+import { IData } from "../../interface/interface";
 import { IStatePrice } from "./interface/interface";
 import Error from "../Error/Error";
+import { useAppSelector } from "../../hooks/useAppSelector";
+import { useState, useCallback } from "react";
 
 type TCards = Record<"img", string>;
 
@@ -25,7 +23,7 @@ const CARDS: TCards[] = [
 ];
 
 export default function Pay(): JSX.Element {
-  const data = useContext<IDataControl | null>(UserData);
+  const data = useAppSelector(state => state.user);
 
   const [valuePrice, setValuePrice] = useState<IStatePrice>({
     field: "",
@@ -46,9 +44,8 @@ export default function Pay(): JSX.Element {
     });
   }, []);
 
-  if (data && data.data.user) {
-    const dataContext: TData = data.data;
-    const dataUser: IData | null = dataContext.user;
+  if (data && data.user) {
+    const dataUser: IData = data.user;
     return (
       <main className={gStyles.page}>
         <section className={styles.pay}>

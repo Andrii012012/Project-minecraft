@@ -6,13 +6,11 @@ import ButtonSend from "../../../../components/ui/ButtonSend/ButtonSend";
 import PointFieldGroup from "../../../../components/ui/PointFieldGroup/PointFieldGroup";
 import { useState } from "react";
 import PointFieldFilling from "../../../../components/ui/PointFieldFilling/PointFieldFilling";
-import { TFuncSend } from "../../../../interface/type";
-import { NavigateFunction } from "react-router-dom";
+import { useAppDispatch } from "../../../../hooks/useAppDispatch";
+import { callDateUser, setDataSignIn } from "../../../../features/user/user.";
 
 interface IProps {
-  onFundSend: TFuncSend;
   url: string;
-  goHome: NavigateFunction;
 }
 
 interface IValueField {
@@ -26,7 +24,9 @@ interface IValueField {
 type TValueSetField = React.Dispatch<React.SetStateAction<IValueField>>;
 
 function SendData(props: IProps): JSX.Element {
-  let { onFundSend, url, goHome } = props;
+  let { url } = props;
+
+  const dispatch = useAppDispatch();
 
   const [valueField, setValueField] = useState<IValueField>({
     login: "",
@@ -37,16 +37,15 @@ function SendData(props: IProps): JSX.Element {
 
   async function onSubmitData(e: React.FormEvent) {
     e.preventDefault();
-    const dataForm = new FormData();
-    dataForm.append("login", valueField.login!);
-    dataForm.append("email", valueField.email!);
-    dataForm.append("password", valueField.password!);
-    dataForm.append("date", String(new Date().getTime()));
+    const form = new FormData();
+    form.append("login", valueField.login!);
+    form.append("email", valueField.email!);
+    form.append("password", valueField.password!);
+    form.append("date", String(new Date().getTime()));
     let result = validation(document.querySelectorAll(`.${styles.field}`));
     if (result) {
-      onFundSend(url, dataForm);
-      goHome("/");
-      window.location.reload();
+      dispatch(setDataSignIn({login: valueField.login || '', password: valueField.password || ''}));
+      dispatch(callDateUser({ method: 'post', url, form }));
     }
   }
 

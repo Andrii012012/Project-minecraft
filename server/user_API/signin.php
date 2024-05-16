@@ -56,7 +56,7 @@
 
         $json = json_encode($user);
         
-          echo $json;
+            echo $json;
 
       $connect->close();
       exit();

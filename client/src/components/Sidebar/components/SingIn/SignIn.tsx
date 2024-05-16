@@ -7,10 +7,8 @@ import Field from "../../../ui/Field/Field";
 import { useState } from "react";
 import { urlSignBD } from "../../../../configs/urls";
 import { RECOVERY_ROUTE, REGISTER_ROUTE } from "../../../../routers/routes";
-
-interface IProps {
-  onFuncSend: (urlBd: string, form: object) => Promise<boolean | void>;
-}
+import { callDateUser, setDataSignIn } from "../../../../features/user/user.";
+import { useAppDispatch } from "../../../../hooks/useAppDispatch";
 
 type TStateValue = {
   login?: string;
@@ -19,8 +17,9 @@ type TStateValue = {
 
 type TSetStateValue = React.Dispatch<React.SetStateAction<TStateValue>>;
 
-function SignIn(props: IProps): JSX.Element {
-  let { onFuncSend } = props;
+function SignIn(): JSX.Element {
+
+  const dispatch = useAppDispatch();
 
   const [value, setValue] = useState<TStateValue>({
     login: "",
@@ -32,7 +31,8 @@ function SignIn(props: IProps): JSX.Element {
     let form = new FormData();
     form.append("login", value.login!);
     form.append("password", value.password!);
-    onFuncSend(urlSignBD, form);
+    dispatch(setDataSignIn({ login: value.login!, password: value.password! }));
+    dispatch(callDateUser({ method: 'post', url: 'http://server/?action=signin', form }));
   }
 
   return (
@@ -91,4 +91,4 @@ function SignIn(props: IProps): JSX.Element {
   );
 }
 
-export {SignIn, type TStateValue, type TSetStateValue}
+export { SignIn, type TStateValue, type TSetStateValue }

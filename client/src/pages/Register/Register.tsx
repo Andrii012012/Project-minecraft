@@ -1,22 +1,16 @@
-import React from "react";
 import styles from "./style.module.scss";
 import gStyles from "../../styles/style.module.scss";
 import imageMain from "../../assets/images/page/Register/register-image-main.png";
 import incoFilling from "../../assets/images/global/icon-filling-data.svg";
-import { useContext } from "react";
-import { UserData } from "../../contexts/user";
 import { urlResiterDB } from "../../configs/urls";
-import { useNavigate } from "react-router-dom";
 import AccessClosed from "../../components/AccessClosed/AccessClosed";
 import { SendData } from "./components/SendData/SendData";
-import { IDataControl } from "../../interface/interface";
+import { useAppSelector } from "../../hooks/useAppSelector";
 
 export default function Register(): JSX.Element {
-  const getMethodsUser = useContext<IDataControl | null>(UserData);
-  const onFundSend = getMethodsUser?.setDataUser;
-  const getHome = useNavigate();
+  const data = useAppSelector(state => state.user);
 
-  if (!getMethodsUser?.data.isActive && onFundSend) {
+  if (!(data.status === 'success')) {
     return (
       <main className={gStyles.page}>
         <section className={styles.register}>
@@ -39,8 +33,6 @@ export default function Register(): JSX.Element {
           <div className={`${styles.content} ${gStyles.containerContent}`}>
             <SendData
               url={urlResiterDB}
-              goHome={getHome}
-              onFundSend={onFundSend}
             />
           </div>
         </section>

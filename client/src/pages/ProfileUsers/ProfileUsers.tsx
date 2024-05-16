@@ -1,31 +1,30 @@
-import React from "react";
-import styles from "./style.module.scss";
 import { useParams } from "react-router-dom";
 import Profile from "../../containers/Profile/Profile";
-import { useContext, useEffect } from "react";
-import { CallUser } from "../../contexts/getUser";
 import { urlGetUser } from "../../configs/urls";
 import Error from "../Error/Error";
-import { IDataControlGetUser } from "../../interface/interface";
+import { useEffect, useState } from "react";
+import { IData } from "../../interface/interface";
+import clientApi from "../../api/client";
 
 export default function ProfileUsers(): JSX.Element {
   const value = useParams();
-  const data = useContext<IDataControlGetUser | null>(CallUser);
-  const dataUser = data?.data;
-  const onFuncGetUser = data?.setDataUser;
+  const [dataUser, setUserData] = useState<IData>();
 
   async function onSubmitData() {
-    const form = new FormData();
     if (value && value.id) {
+      const form = new FormData();
       form.append("getUser", value.id);
-      onFuncGetUser && onFuncGetUser(urlGetUser, form);
+      let data = await clientApi('post', urlGetUser, form);
+      setUserData(data && data);
     }
   }
   useEffect(() => {
     onSubmitData();
   }, [value]);
-  if (dataUser && dataUser.user) {
-    return <Profile userData={dataUser.user} />;
+
+
+  if (dataUser) {
+    return <Profile userData={dataUser} />;
   } else {
     return <Error />;
   }

@@ -1,23 +1,27 @@
 import React from "react";
 import styles from "./style.module.scss";
 import gStyles from "../../../../styles/style.module.scss";
-import { useNavigate } from "react-router-dom";
 import ButtonSend from "../../../../components/ui/ButtonSend/ButtonSend";
-import { TFuncSend } from "../../../../interface/type";
 import { IStatBuyPrivilege } from "../../interface/interface";
 import { IData } from "../../../../interface/interface";
+import { useAppDispatch } from "../../../../hooks/useAppDispatch";
+import { callDateUser } from "../../../../features/user/user.";
+import update from "../../../../features/utils/update";
+import { useAppSelector } from "../../../../hooks/useAppSelector";
 
 interface IProps {
-  onFuncSend: TFuncSend;
   data: IStatBuyPrivilege;
   url: string;
   dataUser: IData | null;
 }
 
 export default function SendData(props: IProps): JSX.Element {
-  let { onFuncSend, data, url, dataUser } = props;
+  let { data, url, dataUser } = props;
 
-  const goHome = useNavigate();
+  const dispatch = useAppDispatch();
+  const userData = useAppSelector(state => state.user);
+  const statusUpdate = userData.status;
+  const dataSignIn = userData.dataSingIn;
 
   async function onSubmitData(e: React.FormEvent) {
     e.preventDefault();
@@ -29,13 +33,10 @@ export default function SendData(props: IProps): JSX.Element {
       form.append("privilege", data?.privilege!);
       form.append("price", data?.finalPrice as keyof React.ReactNode);
       form.append("duration", data?.duration as keyof React.ReactNode);
-      let result = await onFuncSend(url, form);
-      if (result) {
-        goHome("/");
-        window.location.reload();
-      }
-    }
+      await dispatch(callDateUser({ method: 'post', url, form }));
+      update(statusUpdate, {login: dataSignIn?.login || '', password: dataSignIn?.password || ''}, dispatch);
   }
+}
 
   return (
     <form action={url} onSubmit={(e) => onSubmitData(e)} method="post">

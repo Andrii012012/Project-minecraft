@@ -5,18 +5,17 @@ import { ISettings } from "../../interface/interface";
 import { TSetSettings } from "../../interface/type";
 
 interface IProps {
-  options: string;
   setValue: TSetSettings;
   value: ISettings;
 }
 
 export default function SetDescription(props: IProps): JSX.Element {
-  let { options, setValue, value } = props;
+  let { setValue, value } = props;
 
   function changeValue(e: React.ChangeEvent<HTMLTextAreaElement>) {
     setValue((prevState) => {
       const newData = { ...prevState };
-      newData[options] = e.target.value;
+      newData.shortDescription = e.target.value;
       return newData;
     });
   }
@@ -28,7 +27,7 @@ export default function SetDescription(props: IProps): JSX.Element {
       </h3>
       <textarea
         className={`${styles.description} ${gStyles.textSmall}`}
-        value={value[options]}
+        value={value.shortDescription}
         onChange={(e) => changeValue(e)}
       ></textarea>
     </>

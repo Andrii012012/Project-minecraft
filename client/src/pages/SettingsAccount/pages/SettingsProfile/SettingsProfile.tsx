@@ -3,19 +3,19 @@ import styles from "./style.module.scss";
 import gStyles from '../../../../styles/style.module.scss';
 import ButtonSend from "../../../../components/ui/ButtonSend/ButtonSend";
 import { useState } from "react";
-import { urlUpdata } from "../../../../configs/urls";
+import { urlSignBD, urlUpdata } from "../../../../configs/urls";
 import ChangeUserList from "../../components/ChangeUserList/ChangeUserList";
 import SetDescription from "../../components/SetDescription/SetDescription";
-import { TFuncSend } from "../../../../interface/type";
-import { NavigateFunction } from "react-router-dom";
 import { IData } from "../../../../interface/interface";
 import { ISettings } from "../../interface/interface";
 import { TUserList } from "../../interface/type";
+import { useAppDispatch } from "../../../../hooks/useAppDispatch";
+import { callDateUser, updateUser } from "../../../../features/user/user.";
+import { useAppSelector } from "../../../../hooks/useAppSelector";
+import update from "../../../../features/utils/update";
 
 interface IProps {
   user: IData;
-  onFuncSend: TFuncSend;
-  goHome: NavigateFunction;
 }
 
 const CHANGE_USER_LIST: TUserList[] = [
@@ -35,25 +35,31 @@ const CHANGE_USER_LIST: TUserList[] = [
 ];
 
 export default function SettingsProfile(props: IProps): JSX.Element {
-  let { user, onFuncSend, goHome } = props;
+  let { user } = props;
+
+  const dispatch = useAppDispatch();
+  const data = useAppSelector(state => state.user);
+  const statusUpdate = data.status;
+  const dataSignIn = data.dataSingIn;
 
   const [settings, setSettings] = useState<ISettings>({
-    avatar: "",
-    skin: "",
-    shortDescription: "",
+    avatar: {},
+    skin: {},
+    shortDescription: '',
   });
+
 
   async function onSubmitData(e: React.FormEvent) {
     e.preventDefault();
-    const form = new FormData();
-    form.append("id", user.id);
-    form.append("avatar", settings.avatar);
-    form.append("skin", settings.skin);
-    form.append("shortDescription", settings.shortDescription);
-    let result = await onFuncSend(urlUpdata, form);
-    if (result) {
-      goHome("/");
-      window.location.reload();
+    if (settings && settings.avatar) {
+
+      const form = new FormData();
+      form.append("id", user.id);
+      form.append("avatar", settings.avatar as keyof object);
+      form.append("skin", settings.skin as keyof object);
+      form.append("shortDescription", settings.shortDescription);
+      await dispatch(updateUser({ method: 'post', url: urlUpdata, form }));
+      update(statusUpdate, {login: dataSignIn?.login || '', password: dataSignIn?.password || ''}, dispatch);
     }
   }
 
@@ -69,7 +75,6 @@ export default function SettingsProfile(props: IProps): JSX.Element {
         <div>
           <ChangeUserList list={CHANGE_USER_LIST} setValue={setSettings} />
           <SetDescription
-            options={"shortDescription"}
             setValue={setSettings}
             value={settings}
           />

@@ -18,8 +18,9 @@ export default function ChangeUserList(props: IProps): JSX.Element {
     setValue((prevState) => {
       const newSettings = { ...prevState };
       if (e.target && e.target.files) {
-        newSettings[item.change] = String(e.target.files[0]);
+        newSettings[item.change] = e.target.files[0];
       }
+       console.log(newSettings);
       return newSettings;
     });
   }

@@ -1,8 +1,8 @@
 interface ISettings {
-  [key: string]: string;
-  avatar: string;
-  skin: string;
+  skin: object;
   shortDescription: string;
+  avatar: object;
+  [key: string]: object | string;
 }
 
 export { type ISettings };

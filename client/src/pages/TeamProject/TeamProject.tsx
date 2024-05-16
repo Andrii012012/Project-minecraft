@@ -1,17 +1,16 @@
-import React from "react";
 import styles from "./style.module.scss";
 import gStyles from "../../styles/style.module.scss";
-import { useEffect, useContext } from "react";
-import { UsersDatas } from "../../contexts/users";
-import { urlGetTeamProject } from "../../configs/urls";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ServersMainCraft from "./components/ServersMainCraft/ServersMainCraft";
 import SeniorTeamProject from "./components/SeniorTeamProject/SeniorTeamProject";
 import Header from "./components/Header/Header";
 import Branches from "./components/Branches/Branches";
-import { IDataControlUsers } from "../../interface/interface";
 import { IData } from "../../interface/interface";
 import { TServers, TBranchesList } from "./interface/type";
+import { useAppSelector } from "../../hooks/useAppSelector";
+import { useAppDispatch } from "../../hooks/useAppDispatch";
+import { callDateUsers } from "../../features/users/users";
 
 const SERVERS: TServers[] = [
   { name: "TechnoMagic", id: 1 },
@@ -19,18 +18,18 @@ const SERVERS: TServers[] = [
 ];
 
 export default function TeamProject(): JSX.Element {
-  const dataUsers = useContext<IDataControlUsers | null>(UsersDatas);
-  const getDataUsers = dataUsers?.users;
-  const getUsers = dataUsers?.getDataUsers;
+  const data = useAppSelector(state => state.users);
+
+  const dispatch = useAppDispatch();
+
   const onCheckingProfile = useNavigate();
 
   useEffect(() => {
-    const dataForm = new FormData();
-    getUsers && getUsers(urlGetTeamProject, dataForm);
+    dispatch(callDateUsers());
   }, []);
 
-  if (getDataUsers && getDataUsers.users) {
-    const users: IData[] = getDataUsers.users;
+  if (data && data.users) {
+    const users = data.users;
 
     const arrayTeamProject: IData[] = [];
 
@@ -65,6 +64,8 @@ export default function TeamProject(): JSX.Element {
         ),
       },
     ];
+
+    console.log(arrayTeamProject);
 
     if (arrayTeamProject.length > 0) {
       return (

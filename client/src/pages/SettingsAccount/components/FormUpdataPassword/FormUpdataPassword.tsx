@@ -5,14 +5,12 @@ import { useState } from "react";
 import PointFieldGroup from "../../../../components/ui/PointFieldGroup/PointFieldGroup";
 import PointFieldFilling from "../../../../components/ui/PointFieldFilling/PointFieldFilling";
 import ButtonSend from "../../../../components/ui/ButtonSend/ButtonSend";
-import { NavigateFunction } from "react-router-dom";
-import { TFuncSend } from "../../../../interface/type";
+import { callDateUser } from "../../../../features/user/user.";
+import { useAppDispatch } from "../../../../hooks/useAppDispatch";
 
 interface IProps {
   url: string;
   id: string;
-  goHome: NavigateFunction;
-  onFuncSend: TFuncSend;
 }
 
 type TField = {
@@ -24,7 +22,9 @@ type TField = {
 type TSetField = React.Dispatch<React.SetStateAction<TField>>;
 
 function FormUpdataPassword(props: IProps): JSX.Element {
-  let { url, goHome, onFuncSend, id } = props;
+  let { url, id } = props;
+
+  const dispatch = useAppDispatch();
 
   const [valueField, setValueField] = useState<TField>({
     oldPassword: "",
@@ -38,11 +38,7 @@ function FormUpdataPassword(props: IProps): JSX.Element {
     form.append("id", id);
     form.append("oldPassword", valueField.oldPassword!);
     form.append("newPassword", valueField.newPassword!);
-    let result = await onFuncSend(url, form);
-    if (result) {
-      goHome("/");
-      window.location.reload();
-    }
+    dispatch(callDateUser({ method: 'post', url, form }));
   }
 
   return (

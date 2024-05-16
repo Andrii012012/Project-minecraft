@@ -2,6 +2,14 @@
 function updata($connect){
 
    include './constants/massage_error.php';
+
+   function getData($data){
+      $json = json_encode($data);
+      
+      echo $json;
+
+       exit();
+     }
      
     function validation($item, $size, $name){
       $black_list = [".js", ".php", ".html", ".scss", ".css", ".ts", ".exe", ".cgi", ".aspx", ".asp", ".htm", ".py", ".xml", ".rb"];
@@ -9,7 +17,6 @@ function updata($connect){
       if(preg_match("/$item\$/i", $name)) return false;
 
      if($size > 2 * 1024 * 1024) return false;
-
       return true;
     }
 
@@ -18,26 +25,19 @@ function updata($connect){
      $skin = $_FILES['skin'];
      $description = $_POST['shortDescription'];
 
-     function getData($data){
-      $json = json_encode($data);
-      
-      echo $json;
-
-       exit();
-     }
-
       if($description){
          if(strlen($description) > 100){
           echo $ERROR_TOO_MUCH_TEXT;
           exit();
          } else { 
           mysqli_query($connect, "UPDATE `data_users` SET `short_description` = '$description' WHERE `id` = $id" );
-          getData($user);
+         //  getData($user);
+         exit();
          }
       }
 
       if($avatar || $skin){
-     $rows = array($avatar, $skin);
+       $rows = array($avatar, $skin);
 
     if(count($rows) > 0){
      foreach($rows as $item){
@@ -49,15 +49,13 @@ function updata($connect){
         $image_name = md5(microtime()).'.'.substr($type, strlen("image/"));
 
         if(validation($item, $size, $name)){
-          if(move_uploaded_file($item['tmp_name'], 'C:\Users\Andrey\GrowWorld\src\assets\upload\avatars/'.$image_name)){
+          if(move_uploaded_file($item['tmp_name'], 'C:\git clone\Project-minecraft\src\assets\upload\avatars/'.$image_name)){
               if($avatar){
                  mysqli_query($connect, "UPDATE `data_users` SET `avatar` = '$image_name'  WHERE `id` = $id");
               } else if($skin){
                  mysqli_query($connect, "UPDATE `data_users` SET `skin` = '$image_name' WHERE `id` = $id");
-              }
-
-               getData($user);
-
+              }               
+               exit();
           } else{
             echo $CONNECT_DB;
             exit();

@@ -11,11 +11,12 @@ import {
   HOME_ROUTE,
 } from "../../../../routers/routes";
 import ListMenuUser from "../ListMenuUser/ListMenuUser";
-import { IData, IObjectDataServer } from "../../../../interface/interface";
+import { IData } from "../../../../interface/interface";
+import { logout } from "../../../../features/user/user.";
+import { useAppDispatch } from "../../../../hooks/useAppDispatch";
 
 interface IProps {
-  leave: () => void;
-  objectDataServer: IObjectDataServer;
+  dataUser: IData | null;
 }
 
 type TUser = {
@@ -39,23 +40,25 @@ const USER_ACCOUNT_NAVIGATOR_ITEMS: Array<TUser> = [
 ];
 
 export default function User(props: IProps): JSX.Element {
-  let { leave, objectDataServer } = props;
+  let { dataUser } = props;
 
-  if (objectDataServer.user) {
-    const user: IData = objectDataServer.user;
+  const dispatch = useAppDispatch();
+
+  if (dataUser) {
+
     return (
       <div className={styles.user}>
         <div className={styles.header}>
           <div className={`${styles.userAvatar} ${styles.avatar}`}>
             <img
-              src={require(`../../../../assets/upload/avatars/${user.avatar}`)}
+              src={require(`../../../../assets/upload/avatars/${dataUser.avatar}`)}
               style={{ width: "80px", height: "80px" }}
               alt=""
             />
           </div>
           <div className={styles.greetings}>
             <p className={`${styles.text} ${gStyles.textMedium}`}>Привет,</p>
-            <p className={`${styles.name} ${gStyles.textMedium}`}>{user.login}</p>
+            <p className={`${styles.name} ${gStyles.textMedium}`}>{dataUser.login}</p>
           </div>
         </div>
         <div className={styles.bodyBalance}>
@@ -63,7 +66,7 @@ export default function User(props: IProps): JSX.Element {
             <img src={iconMonay} />
           </div>
           <div className={styles.bodyInfoBalance}>
-            <p className={styles.textBalance}>{user.coins} грн</p>
+            <p className={styles.textBalance}>{dataUser.coins} грн</p>
             <Link
               className={styles.btnMonay}
               style={{ color: "#fff" }}
@@ -73,7 +76,7 @@ export default function User(props: IProps): JSX.Element {
             </Link>
           </div>
           <div className={styles.bodyInfoBalance}>
-            <p className={styles.textBalance}>{user.bonus} Бонусы</p>
+            <p className={styles.textBalance}>{dataUser.bonus} Бонусы</p>
             <Link
               className={styles.btnMonay}
               style={{ color: "#fff" }}
@@ -87,7 +90,7 @@ export default function User(props: IProps): JSX.Element {
           <ul className={styles.list}>
             <ListMenuUser list={USER_ACCOUNT_NAVIGATOR_ITEMS} />
             <li className={styles.item}>
-              <button type="button" className={styles.btnLeave} onClick={leave}>
+              <button type="button" className={styles.btnLeave} onClick={() => dispatch(logout())}>
                 Выйти
               </button>
             </li>
@@ -95,6 +98,7 @@ export default function User(props: IProps): JSX.Element {
         </div>
       </div>
     );
+
   } else {
     return <></>;
   }

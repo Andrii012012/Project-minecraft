@@ -1,18 +1,11 @@
-import React from "react";
 import styles from "./style.module.scss";
 import gStyles from "../../styles/style.module.scss";
 import imageMain from "../../assets/images/global/minacraft-image-main.jpg";
 import iconRecovery from "../../assets/images/page/Recovery/recovery-icon-recovery.svg";
 import { urlBd } from "../../configs/urls";
-import { useContext } from "react";
-import { UserData } from "../../contexts/user";
 import SendRecovery from "./components/SendRecovery/SendRecovery";
-import { IDataControl } from "../../interface/interface";
 
 export default function Recovery(): JSX.Element {
-  const data = useContext<IDataControl | null>(UserData);
-  const onFundSend = data?.setDataUser;
-  if (onFundSend) {
     return (
       <main className={gStyles.page}>
         <section className={styles.recovery}>
@@ -42,12 +35,9 @@ export default function Recovery(): JSX.Element {
                 тех.поддержке
               </a>
             </p>
-            <SendRecovery url={urlBd} onFundSend={onFundSend} />
+            <SendRecovery url={urlBd} />
           </div>
         </section>
       </main>
     );
-  } else {
-    return <></>;
-  }
 }

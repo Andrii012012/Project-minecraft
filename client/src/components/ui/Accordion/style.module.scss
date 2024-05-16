@@ -11,14 +11,14 @@
   }
 }
 
-.accordionWrapper {
+.accordionBody {
   max-height: 0px;
   overflow: hidden;
   transition: 0.3s linear;
 }
 
 .activeAccordion {
-  .accordionWrapper {
+  .accordionBody {
     visibility: visible;
   }
   .wapperIcon img {

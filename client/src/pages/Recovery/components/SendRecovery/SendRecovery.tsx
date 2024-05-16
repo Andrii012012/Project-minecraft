@@ -6,13 +6,13 @@ import ButtonSend from "../../../../components/ui/ButtonSend/ButtonSend";
 import PointFieldGroup from "../../../../components/ui/PointFieldGroup/PointFieldGroup";
 import PointFieldFilling from "../../../../components/ui/PointFieldFilling/PointFieldFilling";
 import { validation } from "../../../../utils/validation";
-import { TFuncSend } from "../../../../interface/type";
 import { useNavigate } from "react-router-dom";
 import { HOME_ROUTE } from "../../../../routers/routes";
+import { useAppDispatch } from "../../../../hooks/useAppDispatch";
+import { callDateUser } from "../../../../features/user/user.";
 
 interface IProps {
   url: string;
-  onFundSend: TFuncSend;
 }
 
 type TStateValueField = {
@@ -23,7 +23,9 @@ type TStateValueField = {
 type TSetStateValueField = React.Dispatch<React.SetStateAction<TStateValueField>>;
 
 export default function SendRecovery(props: IProps): JSX.Element {
-  let { url, onFundSend } = props;
+  let { url } = props;
+
+  const dispatch = useAppDispatch();
 
   const goHome = useNavigate();
 
@@ -36,7 +38,7 @@ export default function SendRecovery(props: IProps): JSX.Element {
       document.querySelectorAll<HTMLInputElement>(`.${styles.field}`)
     );
     if (result) {
-      onFundSend(url, form);
+      dispatch(callDateUser({ method: 'post', url, form }));
       goHome(HOME_ROUTE);
       window.location.reload();
     }
